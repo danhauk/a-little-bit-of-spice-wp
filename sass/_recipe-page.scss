@@ -1,0 +1,30 @@
+//--RECIPE PAGE--//
+
+.generic .flag{
+	position: relative;
+	display: table;
+	width: 100%;
+	label{
+		position: absolute;
+		display:table-cell;
+		width: 100%;
+		align-content:center;
+		top:16px;
+		font-size: 12px;
+		color: $ash;
+		text-align: center;
+		span{
+			display: inline-block;
+			background-color: white;
+			border:1px solid $smoke;
+			padding:4px 15px;
+		}
+	}
+}
+
+.ingredients{
+	div{
+		line-height: 1.4;
+		margin:8px 0;
+	}
+}

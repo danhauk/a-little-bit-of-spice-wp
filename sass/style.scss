@@ -20,87 +20,84 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
---------------------------------------------------------------*/
-@import "variables-site/variables-site";
-@import "mixins/mixins-master";
+@import "colors";
+@import "fonts";
+@import "breakpoints";
+@import "mixins";
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 @import "normalize";
 
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
+*, *:before, *:after{
+	@include box-sizing();
+}
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
+.clearfix:after {
+	clear: both;
+}
 
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
+.clearfix {
+	*zoom: 1;
+}
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-@import "navigation/navigation";
+.lg-only{
+	display: none;
+	@media($lg){
+		display: initial;
+	}
+}
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
-@import "modules/accessibility";
+.ct-share-widgets {
+		text-align: center;
+}
 
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-@import "modules/alignments";
 
-/*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "modules/clearings";
+.sm-onlyblock{
+	display: block;
+	@media($lg){
+		display: none;
+	}
+}
+::selection {
+	background: rgba($selection, .5); /* Safari */
+	}
+::-moz-selection {
+	background: rgba($selection, .5) /* Firefox */
+}
 
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
+body {
+	font-size:16px;
+	line-height:1.8;
+	color:$text-color;
+	@include bodytext();
+	@include crisp();
+	@media($md){
+		font-size:18px;
+	}
 
-/*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
+	@media($xl){
+		font-size:18px;
+	}
+}
 
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+span.block{display: block;}
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-@import "media/media";
+@import "typography";
+@import "buttons";
+@import "media";
+@import "commons";
+@import "footer";
+@import "index-page";
+@import "pagination";
+@import "recipe-page";
+@import "static-pages";
+@import "card-snippet";
+@import "recipe-index";
+@import "misc";

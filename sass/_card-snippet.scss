@@ -1,0 +1,92 @@
+//----CARD SNIPPET----//
+.sidebar .similar-card .similar-post-wrapper{
+	@media($md){
+		img{
+			@include transition(all .2s);
+			opacity: 1;
+			filter: grayscale(60%);
+		}
+		.img-holder:after{
+			opacity: .4;
+			@include transition(all .2s);
+		}
+
+		&:hover{
+			img{
+			opacity: 1;
+			filter: grayscale(0%);
+			}
+			.img-holder:after{
+				opacity: 1;
+			}
+		}
+	}
+}
+.similar-posts {
+	//border-top: 1px solid $smoke;
+	h3{ color:$black;
+		padding-top:20px;
+		letter-spacing: .1rem;
+		font-family: $font-heading;
+		font-size: 15px;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 400;
+		@media($md){padding-top:40px; text-align: center;}
+	}
+	width: auto;
+}
+.similar-card{
+	width: 100%;
+	float: left;
+	.similar-post-wrapper{
+		margin:10px 0px;
+		position: relative;
+		line-height: 0;
+		.img-holder{
+			margin:0;
+			position: relative;
+			padding-top:56%;
+			position: relative;
+			background-color: #efefef;
+			overflow: hidden;
+			&:after{
+				content: '';
+				display: block;
+				left: 0; right: 0; bottom: 0;
+				height: 50%;
+				opacity: .9;
+				@include bottom-gradient();
+				pointer-events: none;
+				position: absolute;
+			}
+			a.thumb{
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top:0;
+				display: block;
+				img{
+					width: 100%;
+				}
+			}
+		}
+		h3{
+			font-family: $font-heading;
+			font-weight: 400;
+			letter-spacing: normal;
+			position: absolute;
+			text-transform: none;
+			border: none;
+			z-index: 1;
+			line-height: 1.2;
+			padding: 4%;
+			font-size: 1.1rem;
+			margin: 0;
+			bottom: 0; left: 0; right: 0;
+			a{
+				color: $white;
+			}
+		}
+	}
+}

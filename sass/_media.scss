@@ -1,0 +1,43 @@
+//--MEDIA--//
+.img-holder{
+	margin-top: 1.5rem;
+	overflow: hidden;
+	img{
+		width:100%;
+	}
+}
+
+
+.img-center, .img-full-width{
+	overflow: hidden;
+	margin:30px 0;
+	text-align: center;
+	img{
+		max-width: 100%;
+	}
+}
+
+.img-left{
+	width: 50%;
+	overflow: hidden;
+	text-align: center;
+	float: left;
+	margin-right: 20px;
+	img{
+		max-width: 100%;
+		max-width: 100%;
+	}
+}
+
+.center{
+	text-align: center;
+}
+
+.img-step{
+	overflow: hidden;
+	img{
+		max-width: 100%;
+	}
+	margin-top:10px;
+	margin-bottom: 20px;
+}

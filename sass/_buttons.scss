@@ -1,0 +1,50 @@
+//--BUTTONS--//
+.btn{
+	@include transition(all .2s);
+	outline:none;
+	padding: 5px 10px;
+	border: 1px solid $link-primary;
+	color: $white;
+	background:$link-primary;
+	@include border-radius(3px);
+	text-align: center;
+	font-weight: 600;
+	display: inline-block;
+	&:hover{
+		color:$link-primary;
+		border-color: $link-primary;
+		background: $white;
+	}
+
+	&.inverse{
+		background: transparent;
+		color: $ash;
+		border-color:$smoke;
+		&:hover{
+			color: $link-primary;
+			background:rgba($link-primary,.06);
+			border-color: $link-primary;
+		}
+	}
+}
+
+.like-btn, .note-btn{
+	display: inline-block;
+	margin:3px;
+	font-size: 14px;
+	font-family: $font-accent;
+	color:$smoke;
+	@include crispoff();
+	position: relative;
+	a{
+		border:none;
+		color:$smoke;
+		font-size: 24px;
+		margin: 0 2px;
+		position: relative;
+		top:4px;
+	}
+	@media($md){
+		margin-top: 8px;
+	}
+}

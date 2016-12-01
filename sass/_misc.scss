@@ -1,0 +1,164 @@
+//MISC
+
+
+  .pin-share-icon{
+    background:rgba($black,.6);
+    &:hover{background:#e73230;}
+  }
+  .react-autosuggest__suggestions{
+    border-top:none;
+    border-color:#ccc;
+    font-size: 20px;
+    .react-autosuggest__suggestion{
+      line-height: 1;
+    }
+    div .ingredient-title, div .post-title{
+      font-weight: 500;
+      color:rgba($black,.8);
+    }
+  }
+
+  .ct-post-content{
+    font-size: 18px;
+    @media($md){font-size: 20px;}
+    .img-full-width{
+      margin-left: -5%;
+      margin-right: -5%;
+      width: auto;
+      @media($md){
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  .ct-recipe{
+    .recipe-output{
+      .cticon-star, .cticon-star-fill{color:$link-primary;}
+    }
+    .ing-line{
+      .ing-name{
+        position: relative;
+        overflow: hidden;
+        &:after{
+          content: '';
+          position: absolute;
+          top:16px;
+          display: inline-block;
+          height: 1px;
+          border-top: 1px dotted rgba($ash,.2);
+          width: 100%;
+          margin-left: 4px;
+        }
+      }
+      .ing-qty{padding-left: 4px;}
+    }
+  }
+  .post-meta{
+    color:$ash;
+    font-family: $font-accent;
+    border-top:2px solid $smoke;
+      padding: 10px 0;
+      margin-top: 60px;
+      text-align: center;
+      font-style: italic;
+      .ct-post-categories{
+        li{
+          display: inline-block;
+          a{
+            display: inline-block;
+            font-size: 13px;
+            font-style: normal;
+            border: 1px solid rgba($link-primary,.3);
+            @include border-radius(20px);
+            padding: 3px 10px;
+            margin-right: 3px;
+            margin-bottom: 3px;
+            background: transparent;
+            &:hover{border: 1px solid $link-primary; background:rgba($link-primary,.06);}
+          }
+        }
+      }
+    }
+  .ct-share-widgets{
+    text-align: center;
+    @media($md){text-align: left;margin-top:50px;}
+    margin-top:10px;
+    li{margin: 0rem;}
+    a{
+      border: none;
+      margin:0 2px;
+      span{
+        @include border-radius(100%);
+        font-size: 20px;
+        margin:0 8px;
+        @media($md){margin-left: 0; margin-right: 8px;}
+        &:before{line-height: 30px;}
+      }
+      span.share-icon{background-color: transparent; width: auto; height: auto;}
+      span.share-icon.facebook{color:#3a5c99; &:hover{color:#3a5c99; } }
+      span.share-icon.twitter{color:#33ddf4; &:hover{color:#33ddf4; } }
+      span.share-icon.googleplus{color:#dc4e34; &:hover{color:#dc4e34; } }
+      span.share-icon.reddit{color:#00aaf2; &:hover{color:#00aaf2; } }
+      span.share-icon.pinterest{color:#d63734; &:hover{color:#d63734; } }
+      span.share-icon.stumbleupon{color:#f04e23; &:hover{color:#f04e23; } }
+      span.share-icon.yummly{color:#e3641d; &:hover{color:#e3641d; } }
+    }
+  }
+  .social-profile-shell{
+    @media($lg){
+      min-height: 60px;
+    }
+  }
+  .social-accounts{
+    margin-bottom:0px;
+    display: block;
+    &:before, &:after{
+      position: relative;
+      display: inline-block;
+      font-style: italic;
+      color:$ash;
+      font-size: 14px;
+      top:-3px;
+      font-weight:normal;
+      margin-right: 6px;
+    }
+    &:before{content:'We are also on';}
+    li{
+      display: inline-block;
+      margin-right: 6px;
+      font-size: 16px;
+      line-height: 2.5;
+      a{
+        border: none;
+        color:$ash;
+        text-decoration: none;
+        &:hover{color: $link-primary;}
+      }
+
+    }
+  }
+
+  .tagline{
+    display: inline-block;
+    font-family: $font-accent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .6rem;
+    letter-spacing: .05rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #aaa;
+    margin-top: 10px;
+    padding:5px 10px;
+  }
+
+
+
+
+
+  .react-autosuggest__suggestions{
+    @include border-radius(4px);
+    border-color:$smoke;
+    @include box-shadow(0 4px 8px rgba(0,0,0,.3));
+    .react-autosuggest__suggestions-section-name{border-top-color:transparent;}
+  }

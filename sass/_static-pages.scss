@@ -1,0 +1,43 @@
+//---STATIC PAGES---//
+
+.container .content.generic{
+	.masthead{
+
+		.page-header{
+			@media($md){
+				width: 100%;
+				text-align: left;
+			}
+			h1{
+				line-height: 1.1;
+			}
+
+		}
+	}
+
+	&.collection{
+		.page-header{
+			padding-top: 20px;
+			margin-bottom: 20px;
+			@media($md){
+				padding-top: 55px;
+			}
+			label{
+				position: relative;
+				top:5px;
+				font-family: $font-accent;
+				text-transform: uppercase;
+				display: block;
+				font-size: 14px;
+				font-weight: 400;
+				letter-spacing: .02rem;
+				line-height: 1;
+				margin-top:-19px;
+				color:$ash;
+			}
+			h1{
+				color:$ash;
+			}
+		}
+	}
+}

@@ -1,0 +1,150 @@
+a.img-link,
+a.img-link:hover {
+	border: none;
+	text-decoration: none;
+	outline: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+
+	@include transition( all .2s );
+	color: $link-primary;
+	border-bottom: 1px solid transparent;
+}
+
+a:hover{
+	color: darken( adjust-hue( $link-primary, -20deg), 10% );
+	border-bottom: 1px solid rgba( $link-primary, 0.3 );
+}
+
+h1,h2, h3, h4{
+	@include headingtext();
+	font-weight: 600;
+	margin-bottom:.5rem;
+	a{
+		text-decoration:none;
+		color:$black;
+		border: none !important;
+		&:hover{color:$link-primary;}
+	}
+}
+
+h1{
+	font-size:2.4rem;
+	line-height: 1.1;
+	font-weight: 600;
+	letter-spacing: -.05rem;
+	color:$text-color;
+	@media($md){
+		font-size:2.8rem;
+	}
+}
+
+h2.logo-heading{
+	font-family: $font-accent;
+	color: $black !important;
+	letter-spacing: -.02rem;
+	font-weight: 500 !important;
+	font-size: 1.2rem !important;
+	padding-top: 0 !important;
+	line-height: 1.2 !important;
+	@media($md){
+		font-size: 1.5rem !important;
+	}
+}
+
+h2{
+	font-size:1.8rem;
+	line-height: 1.2;
+	padding-top: 1rem;
+	letter-spacing: -.02rem;
+	@include crispoff();
+	font-weight: 700;
+	@include accenttext();
+	color:$text-color;
+	@media($md){
+		padding-top: 0;
+		font-size:2.1rem;
+	}
+}
+
+h3{
+	font-size:1.6rem;
+	line-height: 1.2;
+	font-weight: 400;
+	padding-top: 1rem;
+	letter-spacing: -.02rem;
+	@include accenttext();
+	color:$ash;
+	@include crispoff();
+	@media($md){
+		padding-top: 2rem;
+		font-size:1.8rem;
+	}
+}
+
+h4{
+	@include crispoff();
+	font-size: 1.2rem;
+	line-height: 1.2;
+	margin-bottom: .5rem;
+	margin-top:2rem;
+	font-weight: 600;
+	@media($md){
+		font-size:1.4rem;
+	}
+
+}
+
+h5{
+	@include crispoff();
+	font-size: 1rem;
+	line-height: 1.2;
+	margin-bottom: .5rem;
+	margin-top:2rem;
+	color:$smoke;
+	@media($md){
+		font-size:1.2rem;
+	}
+
+}
+
+h4,h5{
+	font-family: $font-accent;
+	color:$text-color;
+}
+
+p{margin:1.5rem 0};
+
+h2 + p, h3 + p{
+	margin-top:.5rem;
+}
+
+
+blockquote{
+	font-size: 18px;
+	margin-left: 0;
+	margin-right: 0;
+	color:$ash;
+	font-style: italic;
+	text-align: center;
+	line-height: 1.4;
+	letter-spacing: -.03rem;
+	@media($md){
+		font-size:24px;
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+}
+
+	.meta{
+		@include accenttext();
+		display: inline-block;
+		color:$ash;
+		font-size: 12px;
+		line-height: 1.2;
+		&:first-letter{text-transform: uppercase;}
+		@media($sm){font-size: 14px;}
+	}
+	.meta:first-letter{text-transform: uppercase;}
