@@ -810,7 +810,7 @@ blockquote {
       border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
     .container .sidebar .about-me {
       padding-top: 20px; }
-      .container .sidebar .about-me a.img-link {
+      .container .sidebar .about-me .img-link {
         display: inline-block;
         width: 70px;
         height: 70px;
@@ -823,8 +823,6 @@ blockquote {
         -moz-background-clip: padding;
         -webkit-background-clip: padding-box;
         background-clip: padding-box; }
-        .container .sidebar .about-me a.img-link img {
-          width: 100%; }
       .container .sidebar .about-me p {
         margin-bottom: 10px;
         margin-top: 10px;

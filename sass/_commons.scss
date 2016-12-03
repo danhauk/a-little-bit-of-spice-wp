@@ -304,7 +304,7 @@
 
 		.about-me{
 			padding-top: 20px;
-			a.img-link{
+			.img-link{
 				display: inline-block;
 				width: 70px;
 				height: 70px;
@@ -312,7 +312,6 @@
 				overflow: hidden;
 				margin: 0 5px;
 				@include border-radius(100%);
-				img{width: 100%;}
 			}
 
 			p{
