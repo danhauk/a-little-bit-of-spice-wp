@@ -1,6 +1,12 @@
 //--COMMONS--//
-.admin-bar .theme-header {
-	top: 32px;
+.admin-bar {
+	.theme-header,
+	.theme-header.nav-open {
+		top: 32px;
+		@media(max-width:782px) {
+			top: 46px;
+		}
+	}
 }
 
 .theme-header.nav-open{

@@ -194,6 +194,11 @@ td,
 th {
   padding: 0; }
 
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -480,8 +485,13 @@ blockquote {
   .img-step img {
     max-width: 100%; }
 
-.admin-bar .theme-header {
+.admin-bar .theme-header,
+.admin-bar .theme-header.nav-open {
   top: 32px; }
+  @media (max-width: 782px) {
+    .admin-bar .theme-header,
+    .admin-bar .theme-header.nav-open {
+      top: 46px; } }
 
 @media (max-width: 768px) {
   .theme-header.nav-open {
