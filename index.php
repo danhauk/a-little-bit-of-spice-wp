@@ -14,8 +14,15 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="main-pillar">
+		<main id="main" class="content-limiter" role="main">
+			<div class="masthead">
+				<div class="logo-area">
+					<a class="logo-image" href="/">
+						<img src="http://a.ctimg.net/Zh9ZNihxRNeufv7FpkpTMg/image.460.jpg" alt="A Little Bit of Spice" data-reactid="38"><span class="sr-only" data-reactid="39">A Little Bit of Spice</span>
+					</a>
+				</div>
+			</div>
 
 		<?php
 		if ( have_posts() ) :
