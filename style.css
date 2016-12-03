@@ -236,7 +236,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   color: #333;
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -270,7 +270,7 @@ a:hover {
   border-bottom: 1px solid rgba(233, 106, 30, 0.3); }
 
 h1, h2, h3, h4 {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: 600;
   font-weight: 600;
   margin-bottom: .5rem; }
@@ -292,7 +292,7 @@ h1 {
       font-size: 2.8rem; } }
 
 h2.logo-heading {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: #000 !important;
   letter-spacing: -.02rem;
   font-weight: 500 !important;
@@ -310,7 +310,7 @@ h2 {
   letter-spacing: -.02rem;
   -webkit-font-smoothing: subpixel-antialiased;
   font-weight: 700;
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: normal;
   color: #333; }
   @media (min-width: 768px) {
@@ -324,7 +324,7 @@ h3 {
   font-weight: 400;
   padding-top: 1rem;
   letter-spacing: -.02rem;
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.3);
   -webkit-font-smoothing: subpixel-antialiased; }
@@ -356,7 +356,7 @@ h5 {
       font-size: 1.2rem; } }
 
 h4, h5 {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: #333; }
 
 p {
@@ -381,7 +381,7 @@ blockquote {
       margin-right: 2rem; } }
 
 .meta {
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: normal;
   display: inline-block;
   color: rgba(0, 0, 0, 0.3);
@@ -432,7 +432,7 @@ blockquote {
   display: inline-block;
   margin: 3px;
   font-size: 14px;
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: rgba(0, 0, 0, 0.1);
   -webkit-font-smoothing: subpixel-antialiased;
   position: relative; }
@@ -480,6 +480,9 @@ blockquote {
   .img-step img {
     max-width: 100%; }
 
+.admin-bar .theme-header {
+  top: 32px; }
+
 @media (max-width: 768px) {
   .theme-header.nav-open {
     height: 100%;
@@ -503,7 +506,7 @@ blockquote {
       bottom: 0px;
       opacity: 1;
       display: block; }
-    .theme-header.nav-open .nav-area .nav-main {
+    .theme-header.nav-open .nav-area .menu {
       display: block; }
     .theme-header.nav-open a.menu-trigger {
       opacity: 1;
@@ -559,6 +562,7 @@ blockquote {
           -o-transition: all 0.2s;
           padding: 6px 30px 6px 10px;
           color: #000;
+          height: 36px;
           width: 100%;
           background: white;
           -webkit-border-radius: 4px;
@@ -588,12 +592,12 @@ blockquote {
           color: rgba(51, 51, 51, 0.4); }
           .theme-header .nav-area .widget_search .shell button:hover {
             color: #333333; }
-    .theme-header .nav-area .nav-main {
+    .theme-header .nav-area .menu {
       margin: 4rem 0 0;
       text-align: center;
       display: none; }
       @media (min-width: 768px) {
-        .theme-header .nav-area .nav-main {
+        .theme-header .nav-area .menu {
           display: block;
           height: 26px;
           text-align: left;
@@ -602,25 +606,25 @@ blockquote {
           margin: 6px 0;
           width: 60%;
           overflow: hidden; } }
-      .theme-header .nav-area .nav-main li {
+      .theme-header .nav-area .menu li {
         line-height: 1;
         padding: 8px 0;
         font-size: 22px; }
         @media (min-width: 768px) {
-          .theme-header .nav-area .nav-main li {
+          .theme-header .nav-area .menu li {
             padding: 0px 0;
             font-size: 17px;
             display: inline-block;
             margin: 0 10px; } }
-        .theme-header .nav-area .nav-main li a {
+        .theme-header .nav-area .menu li a {
           color: #666;
           border: none;
           font-weight: 400; }
-          .theme-header .nav-area .nav-main li a:hover {
-            color: contrast(#ddd, white, black); }
-          .theme-header .nav-area .nav-main li a.active {
-            font-weight: 600;
-            color: contrast(#ddd, white, black); }
+          .theme-header .nav-area .menu li a:hover {
+            color: black; }
+        .theme-header .nav-area .menu li.current-menu-item a {
+          font-weight: 600;
+          color: black; }
   .theme-header a.menu-trigger {
     position: absolute;
     width: 22px;
@@ -692,7 +696,7 @@ blockquote {
       right: 0;
       left: 0;
       text-align: center;
-      font-family: sans-serif;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       font-size: 14px;
       font-weight: 600;
       letter-spacing: .05rem;
@@ -747,7 +751,7 @@ blockquote {
     font-size: 14px;
     text-align: center;
     line-height: 1.2;
-    font-family: sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     color: #333;
     width: 90%;
     margin: 0 auto; }
@@ -826,7 +830,7 @@ blockquote {
     .container .sidebar h4, .container .sidebar h5 {
       font-size: 18px;
       line-height: 1.2;
-      font-family: sans-serif;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       font-weight: normal; }
       @media (min-width: 768px) {
         .container .sidebar h4, .container .sidebar h5 {
@@ -894,7 +898,7 @@ blockquote {
     line-height: 1.2;
     text-align: center;
     position: relative;
-    font-family: sans-serif; }
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
     @media (min-width: 1024px) {
       .home .post-snippet h2 {
         text-align: left;
@@ -995,7 +999,7 @@ blockquote {
   .container .content.generic.collection .page-header label {
     position: relative;
     top: 5px;
-    font-family: sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     text-transform: uppercase;
     display: block;
     font-size: 14px;
@@ -1033,7 +1037,7 @@ blockquote {
     color: #000;
     padding-top: 20px;
     letter-spacing: .1rem;
-    font-family: sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
@@ -1091,7 +1095,7 @@ blockquote {
         .similar-card .similar-post-wrapper .img-holder a.thumb img {
           width: 100%; }
     .similar-card .similar-post-wrapper h3 {
-      font-family: sans-serif;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       font-weight: 400;
       letter-spacing: normal;
       position: absolute;
@@ -1115,7 +1119,7 @@ blockquote {
     .nav-index ul li {
       padding: 5px 8px;
       display: inline-block;
-      font-family: sans-serif; }
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
       .nav-index ul li a {
         border: none;
         color: rgba(51, 51, 51, 0.3); }
@@ -1193,7 +1197,7 @@ blockquote {
         left: 0; }
   .collection .main-pillar .dishes li div.text-holder h2 {
     margin-top: 0;
-    font-family: sans-serif; }
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
   .collection .main-pillar .dishes li div.text-holder p {
     margin-top: 0;
     font-size: 16px;
@@ -1231,7 +1235,7 @@ blockquote {
     text-align: left;
     display: table;
     width: 100%;
-    font-family: sans-serif;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-weight: 500;
     -webkit-font-smoothing: subpixel-antialiased;
     line-height: 1.6;
@@ -1385,7 +1389,7 @@ blockquote {
       padding-top: 100%;
       text-align: center; }
       .recipe-index ul.card-wrapper li.paginate .more-stuff a.btn {
-        font-family: sans-serif;
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
         vertical-align: middle;
         -webkit-border-radius: 0px;
         -moz-border-radius: 0px;
@@ -1461,7 +1465,7 @@ blockquote {
 
 .post-meta {
   color: rgba(0, 0, 0, 0.3);
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   margin-top: 60px;
@@ -1580,7 +1584,7 @@ blockquote {
 
 .tagline {
   display: inline-block;
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   text-align: center;
   text-transform: uppercase;
   font-size: .6rem;
