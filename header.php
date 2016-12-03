@@ -21,10 +21,10 @@
 
 <body <?php body_class(); ?>>
 <div id="theme-container" class="site">
-	<header class="theme-header nav-open" role="banner">
-		<a class="menu-trigger"><span></span></a>
+	<header class="theme-header" id="theme-header" role="banner">
+		<a class="menu-trigger" id="menu-trigger"><span></span></a>
 
-		<div class="nav-area">
+		<div class="nav-area" id="site-navigation">
 			<?php get_search_form(); ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
