@@ -50,10 +50,13 @@ module.exports = function( grunt ) {
 		cssmin: {
 			minify: {
 				expand: true,
-				cwd: '<%= dirs.css %>/',
-				src: ['*.css'],
+				cwd: './',
+				src: [
+					'*.css',
+					'!*.min.css'
+				],
 				dest: './',
-				ext: '.css'
+				ext: '.min.css'
 			}
 		},
 
