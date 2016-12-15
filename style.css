@@ -229,6 +229,9 @@ a, a:active, a:hover, a:link {
     .lg-only {
       display: initial; } }
 
+.sr-only {
+  display: none; }
+
 .ct-share-widgets {
   text-align: center; }
 
