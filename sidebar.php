@@ -17,11 +17,12 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<div class="blog-logo">
 			<div class="logo-area">
 				<a class="logo-image" href="/">
-					<img src="http://a.ctimg.net/Zh9ZNihxRNeufv7FpkpTMg/image.460.jpg" alt="A Little Bit of Spice" data-reactid="165"><span class="sr-only" data-reactid="166">A Little Bit of Spice</span>
+					<?php echo get_custom_logo(); ?>
+					<span class="sr-only" data-reactid="166">A Little Bit of Spice</span>
 				</a>
 			</div>
 		</div>
-		
+
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	</div>
 </aside><!-- #secondary -->

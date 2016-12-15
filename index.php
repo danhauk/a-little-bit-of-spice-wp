@@ -19,7 +19,8 @@ get_header(); ?>
 			<div class="masthead">
 				<div class="logo-area">
 					<a class="logo-image" href="/">
-						<img src="http://a.ctimg.net/Zh9ZNihxRNeufv7FpkpTMg/image.460.jpg" alt="A Little Bit of Spice" data-reactid="38"><span class="sr-only" data-reactid="39">A Little Bit of Spice</span>
+						<?php the_custom_logo(); ?>
+						<span class="sr-only"><?php echo get_bloginfo( 'name' ); ?></span>
 					</a>
 				</div>
 			</div>

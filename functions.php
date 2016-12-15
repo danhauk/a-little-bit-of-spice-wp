@@ -64,6 +64,29 @@ function a_little_bit_of_spice_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	// Set up the custom logo feature
+	add_theme_support( 'custom-logo' );
+	add_filter( 'get_custom_logo', 'get_my_custom_logo' );
+
+	function get_my_custom_logo( $blog_id = 0 ) {
+	  $html = '';
+		$custom_logo_id = get_theme_mod( 'custom_logo' );
+
+		// We have a logo. Logo is go.
+		if ( $custom_logo_id ) {
+			$custom_logo = wp_get_attachment_image_src( $custom_logo_id, 'full', false );
+			$custom_logo_url = $custom_logo[0];
+			$html = sprintf( '<img src="%1$s" alt="%2$s"/>', $custom_logo_url, get_bloginfo( 'name' ) );
+		}
+
+		// If no logo is set but we're in the Customizer, leave a placeholder (needed for the live preview).
+		elseif ( is_customize_preview() ) {
+			$html = sprintf( '<img class="custom-logo"/>' );
+		}
+
+		return $html;
+	}
 }
 endif;
 add_action( 'after_setup_theme', 'a_little_bit_of_spice_setup' );
