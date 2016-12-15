@@ -30,4 +30,4 @@
 		</div>
 	</header>
 
-	<div id="content" class="container">
+	<div id="content" class="container<?php echo ( is_home() ? ' home' : '' ); ?>">
