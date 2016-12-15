@@ -9,23 +9,28 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="main-pillar">
+		<main id="main" class="content-limiter" role="main">
+			<?php
+			while( have_posts() ) : the_post();
+			?>
+			<div class="masthead">
+				<div class="logo-area">
+					<a class="logo-image" href="/">
+						<?php the_custom_logo(); ?>
+						<span class="sr-only"><?php echo get_bloginfo( 'name' ); ?></span>
+					</a>
+				</div>
+				<div class="page-header">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</div>
 
-		<?php
-		while ( have_posts() ) : the_post();
+			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-			get_template_part( 'template-parts/content', get_post_format() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
+			<?php
+			endwhile; // End of the loop.
+			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -30,4 +30,15 @@
 		</div>
 	</header>
 
-	<div id="content" class="container<?php echo ( is_home() ? ' home' : '' ); ?>">
+	<?php
+	$content_classes = '';
+	if ( is_home() ) {
+		$content_classes = 'content home';
+	} elseif ( is_single() ) {
+		$content_classes = 'content post generic';
+	} else {
+		$content_classes = 'content';
+	}
+	?>
+	<div id="content" class="container">
+		<div class="<?php echo $content_classes; ?>">
