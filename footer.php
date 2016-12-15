@@ -11,15 +11,23 @@
 
 ?>
 
-	</div><!-- #content -->
+		</div><!-- .content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'a-little-bit-of-spice' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'a-little-bit-of-spice' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'a-little-bit-of-spice' ), 'a-little-bit-of-spice', '<a href="https://danhauk.com" rel="designer">Dan Hauk</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+		<div class="footer">
+			<div class="main-pillar">
+				<div class="content-limiter">
+					<footer>
+						<div class="ct-footer">
+							&copy; <?php echo get_bloginfo( 'name' ); ?>.
+							<div class="credit">
+								Powered by &nbsp;<a href="https://wordpress.org" target="_blank">WordPress</a>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div><!-- .container -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
