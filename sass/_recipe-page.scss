@@ -77,3 +77,36 @@ body.single-recipe {
 		}
 	}
 }
+
+// ingredients
+.ct-recipe .ing-line {
+	display: table;
+	width: 100%;
+
+	div {
+		display: table-cell;
+    line-height: 1.2;
+    padding-top: .35rem;
+    padding-bottom: .35rem;
+	}
+
+	.ing-name {
+		width: auto;
+    padding-right: 5px;
+		position: relative;
+    overflow: hidden;
+	}
+
+	.ing-qty {
+		width: 30%;
+    font-style: italic;
+    margin-left: 3px;
+		padding-left: 4px;
+	}
+}
+
+// remove checkboxes that recipe hero plugin adds
+#rh_ingredients_form input,
+#rh_ingredients_form label {
+	display: none;
+}

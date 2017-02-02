@@ -1034,6 +1034,29 @@ body.single-recipe .images {
     .ct-recipe .recipe-meta-inline ul li .item-value {
       display: inline-block; }
 
+.ct-recipe .ing-line {
+  display: table;
+  width: 100%; }
+  .ct-recipe .ing-line div {
+    display: table-cell;
+    line-height: 1.2;
+    padding-top: .35rem;
+    padding-bottom: .35rem; }
+  .ct-recipe .ing-line .ing-name {
+    width: auto;
+    padding-right: 5px;
+    position: relative;
+    overflow: hidden; }
+  .ct-recipe .ing-line .ing-qty {
+    width: 30%;
+    font-style: italic;
+    margin-left: 3px;
+    padding-left: 4px; }
+
+#rh_ingredients_form input,
+#rh_ingredients_form label {
+  display: none; }
+
 @media (min-width: 768px) {
   .container .content.generic .masthead .page-header {
     width: 100%;
