@@ -803,7 +803,6 @@ blockquote {
             .container .sidebar .blog-logo .logo-image img {
               max-width: 100%; } }
     .container .sidebar .widget {
-      min-width: 300px;
       display: inline-block;
       text-align: left;
       margin-bottom: 10px;
