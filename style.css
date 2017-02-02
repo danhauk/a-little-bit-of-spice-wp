@@ -1519,8 +1519,15 @@ blockquote {
       text-align: left;
       margin-top: 50px; } }
   .ct-share-widgets li {
+    display: inline-block;
     margin: 0rem; }
   .ct-share-widgets a {
+    vertical-align: top;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px;
+    color: #888;
+    -webkit-font-smoothing: subpixel-antialiased;
     border: none;
     margin: 0 2px; }
     .ct-share-widgets a span {
@@ -1536,20 +1543,34 @@ blockquote {
         .ct-share-widgets a span {
           margin-left: 0;
           margin-right: 8px; } }
-      .ct-share-widgets a span:before {
+      .ct-share-widgets a span::before {
         line-height: 30px; }
     .ct-share-widgets a span.share-icon {
       background-color: transparent;
       width: auto;
       height: auto; }
+      .ct-share-widgets a span.share-icon::before {
+        font-family: cticon;
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 36px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
     .ct-share-widgets a span.share-icon.facebook {
       color: #3a5c99; }
       .ct-share-widgets a span.share-icon.facebook:hover {
         color: #3a5c99; }
+      .ct-share-widgets a span.share-icon.facebook::before {
+        content: "\E602"; }
     .ct-share-widgets a span.share-icon.twitter {
       color: #33ddf4; }
       .ct-share-widgets a span.share-icon.twitter:hover {
         color: #33ddf4; }
+      .ct-share-widgets a span.share-icon.twitter::before {
+        content: "\E603"; }
     .ct-share-widgets a span.share-icon.googleplus {
       color: #dc4e34; }
       .ct-share-widgets a span.share-icon.googleplus:hover {
@@ -1562,6 +1583,8 @@ blockquote {
       color: #d63734; }
       .ct-share-widgets a span.share-icon.pinterest:hover {
         color: #d63734; }
+      .ct-share-widgets a span.share-icon.pinterest::before {
+        content: "\E605"; }
     .ct-share-widgets a span.share-icon.stumbleupon {
       color: #f04e23; }
       .ct-share-widgets a span.share-icon.stumbleupon:hover {
@@ -1570,6 +1593,8 @@ blockquote {
       color: #e3641d; }
       .ct-share-widgets a span.share-icon.yummly:hover {
         color: #e3641d; }
+      .ct-share-widgets a span.share-icon.yummly::before {
+        content: "\E606"; }
 
 @media (min-width: 1024px) {
   .social-profile-shell {

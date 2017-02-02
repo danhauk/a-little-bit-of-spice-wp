@@ -166,3 +166,21 @@ require get_template_directory() . '/inc/jetpack.php';
  * Custom Authors Widget
  */
 require get_template_directory() . '/inc/authors-widget.php';
+
+/**
+ * cticon font face
+ */
+function a_litt_bit_of_spice_fonts() {
+	?>
+	<style type="text/css">
+	@font-face {
+			font-family: cticon;
+			src: url(<?php echo get_stylesheet_directory_uri(); ?>/static/c77ec4b2bcebdca8ebbf9ecccde6b387.eot);
+			src: url(<?php echo get_stylesheet_directory_uri(); ?>/static/c77ec4b2bcebdca8ebbf9ecccde6b387.eot#iefix) format('embedded-opentype'),url(<?php echo get_stylesheet_directory_uri(); ?>/static/8cca679e277e265a6e002722312ea5f5.ttf ) format('truetype'),url(<?php echo get_stylesheet_directory_uri(); ?>/static/035ce9e20adfdff0410806f763949379.woff) format('woff'),url(<?php echo get_stylesheet_directory_uri(); ?>/static/8bb8aa0c0482e55e89ccb6477f4a37b3.svg#cticon) format('svg');
+			font-weight: 400;
+			font-style: normal
+	}
+	</style>
+	<?php
+}
+add_action( 'after_setup_theme', 'a_litt_bit_of_spice_fonts' );

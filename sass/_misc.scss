@@ -83,8 +83,17 @@
     text-align: center;
     @media($md){text-align: left;margin-top:50px;}
     margin-top:10px;
-    li{margin: 0rem;}
+    li {
+			display: inline-block;
+			margin: 0rem;
+		}
     a{
+			vertical-align: top;
+			text-align: center;
+			text-decoration: none;
+			margin: 3px;
+			color: #888;
+			-webkit-font-smoothing: subpixel-antialiased;
       border: none;
       margin:0 2px;
       span{
@@ -92,16 +101,47 @@
         font-size: 20px;
         margin:0 8px;
         @media($md){margin-left: 0; margin-right: 8px;}
-        &:before{line-height: 30px;}
+        &::before{line-height: 30px;}
       }
-      span.share-icon{background-color: transparent; width: auto; height: auto;}
-      span.share-icon.facebook{color:#3a5c99; &:hover{color:#3a5c99; } }
-      span.share-icon.twitter{color:#33ddf4; &:hover{color:#33ddf4; } }
+      span.share-icon{
+				background-color: transparent;
+				width: auto;
+				height: auto;
+				&::before {
+					font-family: cticon;
+					speak: none;
+					font-style: normal;
+					font-weight: 400;
+					font-variant: normal;
+					text-transform: none;
+					line-height: 36px;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+			}
+      span.share-icon.facebook{
+				color:#3a5c99;
+				&:hover{color:#3a5c99; }
+				&::before{content: "\E602"; }
+			}
+      span.share-icon.twitter{
+				color:#33ddf4;
+				&:hover{color:#33ddf4; }
+				&::before{content: "\E603"; }
+			}
       span.share-icon.googleplus{color:#dc4e34; &:hover{color:#dc4e34; } }
       span.share-icon.reddit{color:#00aaf2; &:hover{color:#00aaf2; } }
-      span.share-icon.pinterest{color:#d63734; &:hover{color:#d63734; } }
+      span.share-icon.pinterest{
+				color:#d63734;
+				&:hover{color:#d63734; }
+				&::before{content: "\E605"; }
+			}
       span.share-icon.stumbleupon{color:#f04e23; &:hover{color:#f04e23; } }
-      span.share-icon.yummly{color:#e3641d; &:hover{color:#e3641d; } }
+      span.share-icon.yummly{
+				color:#e3641d;
+				&:hover{color:#e3641d; }
+				&::before{content: "\E606"; }
+			}
     }
   }
   .social-profile-shell{
