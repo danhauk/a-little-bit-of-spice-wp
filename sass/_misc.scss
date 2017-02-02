@@ -20,6 +20,10 @@
 
   .ct-post-content{
     font-size: 18px;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
     @media($md){font-size: 20px;}
     .img-full-width{
       margin-left: -5%;

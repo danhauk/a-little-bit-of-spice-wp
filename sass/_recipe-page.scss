@@ -28,3 +28,52 @@
 		margin:8px 0;
 	}
 }
+
+body.single-recipe {
+	.images {
+		margin: 1.5rem 0;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+		.recipe-schema-thumb {
+			display: none;
+		}
+	}
+}
+
+// recipe summary
+.ct-recipe .recipe-meta-inline {
+	.block-head {
+		display: table;
+		width: 100%;
+	}
+
+	ul {
+		clear: both;
+
+		li {
+			margin-left: 0;
+			list-style: none;
+			width: 100%;
+			list-style-position: outside;
+			margin-bottom: .25rem;
+			@media($md) {
+				width: 50%;
+				float: left;
+			}
+
+			.item-key {
+				display: inline-block;
+				color: #666;
+				&::after {
+					content: ':';
+					margin: 0 4px;
+				}
+			}
+			.item-value {
+				display: inline-block;
+			}
+		}
+	}
+}

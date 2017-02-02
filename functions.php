@@ -87,6 +87,11 @@ function a_little_bit_of_spice_setup() {
 
 		return $html;
 	}
+
+	/**
+	 * Remove default styles for Recipe Hero plugin
+	 */
+	add_filter( 'recipe_hero_enqueue_styles', '__return_false' );
 }
 endif;
 add_action( 'after_setup_theme', 'a_little_bit_of_spice_setup' );
