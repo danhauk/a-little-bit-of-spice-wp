@@ -1,7 +1,7 @@
 <?php
 /*
 Template Name: Homepage Recipes
-Template Post Type: post, page, recipe
+Template Post Type: page
 */
 
 /**

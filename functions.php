@@ -89,9 +89,9 @@ function a_little_bit_of_spice_setup() {
 	}
 
 	/**
-	 * Remove default styles for Recipe Hero plugin
+	 * WP Ultimate Recipe custom template
 	 */
-	add_filter( 'recipe_hero_enqueue_styles', '__return_false' );
+	// add_filter( 'wpurp_output_recipe', 'wpurp_custom_template_test', 10, 2 );
 }
 endif;
 add_action( 'after_setup_theme', 'a_little_bit_of_spice_setup' );
@@ -172,3 +172,5 @@ require get_template_directory() . '/inc/jetpack.php';
  * Custom Authors Widget
  */
 require get_template_directory() . '/inc/authors-widget.php';
+
+require get_template_directory() . '/inc/recipe-template.php';

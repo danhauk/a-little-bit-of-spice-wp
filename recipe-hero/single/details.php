@@ -69,7 +69,7 @@ if ( ! empty ( $course_terms ) ) {
 		<li>
 			<span class="item-key">Yield</span>
 			<span itemprop="recipeYield">
-				<?php echo $serves; ?> <?php echo $serves_type; ?>
+				<?php echo $serves; ?> s
 			</span>
 		</li>
 		<?php } ?>
