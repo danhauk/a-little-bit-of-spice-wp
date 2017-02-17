@@ -20,6 +20,512 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+[class*=" cticon-"], [class^=cticon-] {
+  font-family: cticon;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.cticon-bookmark2:before {
+  content: ""; }
+
+.cticon-cookpan:before {
+  content: ""; }
+
+.cticon-nutrition:before {
+  content: ""; }
+
+.cticon-flickr:before {
+  content: ""; }
+
+.cticon-open-panel:before {
+  content: ""; }
+
+.cticon-img-attributes:before {
+  content: ""; }
+
+.cticon-unlink:before {
+  content: ""; }
+
+.cticon-strike:before {
+  content: ""; }
+
+.cticon-ordered-list:before {
+  content: ""; }
+
+.cticon-unordered-list:before {
+  content: ""; }
+
+.cticon-send:before {
+  content: ""; }
+
+.cticon-tune2:before {
+  content: ""; }
+
+.cticon-embed-url:before {
+  content: ""; }
+
+.cticon-email-updates:before {
+  content: ""; }
+
+.cticon-cart-add:before, .cticon-cart:before, .cticon-ecommerce:before, .cticon-purchase:before, .cticon-shopping:before {
+  content: ""; }
+
+.cticon-health:before, .cticon-medical:before, .cticon-medicine:before, .cticon-pulse:before {
+  content: ""; }
+
+.cticon-books:before {
+  content: ""; }
+
+.cticon-codepen2:before {
+  content: ""; }
+
+.cticon-admin-configure-theme:before, .cticon-bucket:before {
+  content: ""; }
+
+.cticon-admin-manage-content:before {
+  content: ""; }
+
+.cticon-admin-edit-post:before, .cticon-eraser:before {
+  content: ""; }
+
+.cticon-bubbles:before {
+  content: ""; }
+
+.cticon-shrink:before {
+  content: ""; }
+
+.cticon-enlarge:before {
+  content: ""; }
+
+.cticon-target:before {
+  content: ""; }
+
+.cticon-upload:before {
+  content: ""; }
+
+.cticon-earth:before {
+  content: ""; }
+
+.cticon-reddit:before {
+  content: ""; }
+
+.cticon-printer:before {
+  content: ""; }
+
+.cticon-google:before {
+  content: ""; }
+
+.cticon-question:before {
+  content: ""; }
+
+.cticon-images:before {
+  content: ""; }
+
+.cticon-bulk-upload:before {
+  content: ""; }
+
+.cticon-add-pic:before {
+  content: ""; }
+
+.cticon-hr:before {
+  content: ""; }
+
+.cticon-embed:before {
+  content: ""; }
+
+.cticon-plus-mini:before {
+  content: ""; }
+
+.cticon-edit-post:before {
+  content: ""; }
+
+.cticon-new-post:before {
+  content: ""; }
+
+.cticon-ct-hollow:before {
+  content: ""; }
+
+.cticon-dash-blog:before {
+  content: ""; }
+
+.cticon-badge:before {
+  content: ""; }
+
+.cticon-logo-v3:before {
+  content: ""; }
+
+.cticon-myblog:before {
+  content: ""; }
+
+.cticon-scan:before {
+  content: ""; }
+
+.cticon-map:before {
+  content: ""; }
+
+.cticon-crown:before {
+  content: ""; }
+
+.cticon-calendar:before {
+  content: ""; }
+
+.cticon-filter-reset:before {
+  content: ""; }
+
+.cticon-filter:before {
+  content: ""; }
+
+.cticon-sort:before {
+  content: ""; }
+
+.cticon-insights:before {
+  content: ""; }
+
+.cticon-dollar:before {
+  content: ""; }
+
+.cticon-at:before {
+  content: ""; }
+
+.cticon-profile:before {
+  content: ""; }
+
+.cticon-jump-to2:before {
+  content: ""; }
+
+.cticon-manage-content:before {
+  content: ""; }
+
+.cticon-admin-bloglist:before, .cticon-bloglist:before {
+  content: ""; }
+
+.cticon-plated:before {
+  content: ""; }
+
+.cticon-admin-followers:before, .cticon-follower:before {
+  content: ""; }
+
+.cticon-comment:before {
+  content: ""; }
+
+.cticon-admin-new-post:before, .cticon-write-now:before {
+  content: ""; }
+
+.cticon-fork:before {
+  content: ""; }
+
+.cticon-spoon:before {
+  content: ""; }
+
+.cticon-lightning2:before {
+  content: ""; }
+
+.cticon-download:before {
+  content: ""; }
+
+.cticon-tick-circle:before {
+  content: ""; }
+
+.cticon-tick-fill:before {
+  content: ""; }
+
+.cticon-close-fill:before {
+  content: ""; }
+
+.cticon-tick:before {
+  content: ""; }
+
+.cticon-h3:before {
+  content: ""; }
+
+.cticon-h2:before {
+  content: ""; }
+
+.cticon-views-3:before {
+  content: ""; }
+
+.cticon-search:before {
+  content: ""; }
+
+.cticon-more-vertical:before {
+  content: ""; }
+
+.cticon-more-fill:before {
+  content: ""; }
+
+.cticon-comment-fill:before {
+  content: ""; }
+
+.cticon-wrench-fill:before {
+  content: ""; }
+
+.cticon-unfollow-fill:before {
+  content: ""; }
+
+.cticon-edit-fill:before {
+  content: ""; }
+
+.cticon-follow:before {
+  content: ""; }
+
+.cticon-unlike-fill:before {
+  content: ""; }
+
+.cticon-browse-theme:before {
+  content: ""; }
+
+.cticon-front:before {
+  content: ""; }
+
+.cticon-arrow-up:before {
+  content: ""; }
+
+.cticon-arrow-down:before {
+  content: ""; }
+
+.cticon-back:before {
+  content: ""; }
+
+.cticon-like-fill:before {
+  content: ""; }
+
+.cticon-like-outline:before {
+  content: ""; }
+
+.cticon-whatsapp:before {
+  content: ""; }
+
+.cticon-cook:before {
+  content: ""; }
+
+.cticon-image-fit:before {
+  content: ""; }
+
+.cticon-bullet:before {
+  content: ""; }
+
+.cticon-heading:before {
+  content: ""; }
+
+.cticon-move:before {
+  content: ""; }
+
+.cticon-admin-delete:before, .cticon-delete:before {
+  content: ""; }
+
+.cticon-group-heading:before {
+  content: ""; }
+
+.cticon-dish-info:before {
+  content: ""; }
+
+.cticon-collection:before {
+  content: ""; }
+
+.cticon-difficulty:before {
+  content: ""; }
+
+.cticon-tags:before {
+  content: ""; }
+
+.cticon-time:before {
+  content: ""; }
+
+.cticon-info:before {
+  content: ""; }
+
+.cticon-text-center:before {
+  content: ""; }
+
+.cticon-text-left:before {
+  content: ""; }
+
+.cticon-text-right:before {
+  content: ""; }
+
+.cticon-image-center:before {
+  content: ""; }
+
+.cticon-image-right:before {
+  content: ""; }
+
+.cticon-image-left:before {
+  content: ""; }
+
+.cticon-link:before {
+  content: ""; }
+
+.cticon-italics:before {
+  content: ""; }
+
+.cticon-quote:before {
+  content: ""; }
+
+.cticon-bold:before {
+  content: ""; }
+
+.cticon-add-video:before {
+  content: ""; }
+
+.cticon-plus:before {
+  content: ""; }
+
+.cticon-note:before {
+  content: ""; }
+
+.cticon-dish:before {
+  content: ""; }
+
+.cticon-cross:before {
+  content: ""; }
+
+.cticon-analytics:before {
+  content: ""; }
+
+.cticon-edit:before {
+  content: ""; }
+
+.cticon-admin-settings:before, .cticon-settings:before {
+  content: ""; }
+
+.cticon-signout:before {
+  content: ""; }
+
+.cticon-diet:before {
+  content: ""; }
+
+.cticon-up:before {
+  content: ""; }
+
+.cticon-down:before {
+  content: ""; }
+
+.cticon-close:before {
+  content: ""; }
+
+.cticon-playhead-2:before {
+  content: ""; }
+
+.cticon-refresh:before {
+  content: ""; }
+
+.cticon-playhead:before {
+  content: ""; }
+
+.cticon-camera:before {
+  content: ""; }
+
+.cticon-alert:before {
+  content: ""; }
+
+.cticon-jump-to:before {
+  content: ""; }
+
+.cticon-star-fill:before {
+  content: ""; }
+
+.cticon-star:before {
+  content: ""; }
+
+.cticon-more:before {
+  content: ""; }
+
+.cticon-share-new:before {
+  content: ""; }
+
+.cticon-views:before {
+  content: ""; }
+
+.cticon-bookmark:before {
+  content: ""; }
+
+.cticon-trash2:before {
+  content: ""; }
+
+.cticon-lock:before {
+  content: ""; }
+
+.cticon-facebook2:before {
+  content: ""; }
+
+.cticon-tune:before {
+  content: ""; }
+
+.cticon-playlist_play:before {
+  content: ""; }
+
+.cticon-search2:before {
+  content: ""; }
+
+.cticon-check_box_outline_blank:before {
+  content: ""; }
+
+.cticon-arrow_back:before {
+  content: ""; }
+
+.cticon-desktop_mac:before {
+  content: ""; }
+
+.cticon-home-outline:before {
+  content: ""; }
+
+.cticon-cloud-upload:before {
+  content: ""; }
+
+.cticon-email:before {
+  content: ""; }
+
+.cticon-admin-analytics:before, .cticon-line-graph:before {
+  content: ""; }
+
+.cticon-share-alternitive:before {
+  content: ""; }
+
+.cticon-share:before {
+  content: ""; }
+
+.cticon-mobile:before {
+  content: ""; }
+
+.cticon-help:before {
+  content: ""; }
+
+.cticon-retweet:before {
+  content: ""; }
+
+.cticon-admin-affiliates:before, .cticon-referral:before {
+  content: ""; }
+
+.cticon-yum:before {
+  content: ""; }
+
+.cticon-stumble:before {
+  content: ""; }
+
+.cticon-youtube:before {
+  content: ""; }
+
+.cticon-google-plus:before {
+  content: ""; }
+
+.cticon-facebook:before {
+  content: ""; }
+
+.cticon-twitter:before {
+  content: ""; }
+
+.cticon-instagram:before {
+  content: ""; }
+
+.cticon-pinterest:before {
+  content: ""; }
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -1034,6 +1540,48 @@ body.single-recipe .images {
     .ct-recipe .recipe-meta-inline ul li .item-value {
       display: inline-block; }
 
+.ct-recipe-apps {
+  text-align: center;
+  display: block;
+  margin: .5em 0 1em;
+  width: 100%;
+  padding: 0;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.05); }
+  .ct-recipe-apps a {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    padding: .8em 3% .6em;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Helvetica,sans-serif !important;
+    border: none !important;
+    background: transparent !important;
+    text-decoration: none !important; }
+    @media (min-width: 768px) {
+      .ct-recipe-apps a {
+        padding: .8em 1.5% .6em; } }
+    .ct-recipe-apps a [class^=cticon-] {
+      font-size: 160%;
+      display: inline-block;
+      vertical-align: middle;
+      color: rgba(0, 0, 0, 0.5);
+      position: relative;
+      top: -1px; }
+      @media (min-width: 768px) {
+        .ct-recipe-apps a [class^=cticon-] {
+          font-size: 140%;
+          margin-right: 3px; } }
+    .ct-recipe-apps a .icon-label {
+      display: block;
+      font-size: 80%; }
+      @media (min-width: 768px) {
+        .ct-recipe-apps a .icon-label {
+          display: inline-block;
+          font-size: 100%; } }
+
 .ct-recipe .ing-line {
   display: table;
   width: 100%; }
@@ -1507,6 +2055,8 @@ body.single-recipe .images {
 
 .ct-post-content {
   font-size: 18px; }
+  .ct-post-content h1, .ct-post-content h2, .ct-post-content h3, .ct-post-content h4, .ct-post-content h5, .ct-post-content h6 {
+    font-weight: 600; }
   .ct-post-content img {
     max-width: 100%;
     height: auto; }

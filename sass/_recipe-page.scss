@@ -78,6 +78,58 @@ body.single-recipe {
 	}
 }
 
+.ct-recipe-apps {
+	text-align: center;
+  display: block;
+  margin: .5em 0 1em;
+  width: 100%;
+  padding: 0;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+  line-height: 1;
+  background: rgba(0,0,0,0.05);
+
+	a {
+		display: inline-block;
+		cursor: pointer;
+		text-align: center;
+		padding: .8em 3% .6em;
+		font-size: 13px;
+		font-weight: 400;
+		font-family: Helvetica,sans-serif !important;
+		border: none !important;
+		background: transparent !important;
+		text-decoration: none !important;
+
+		@media($md) {
+			padding: .8em 1.5% .6em;
+		}
+
+		[class^=cticon-] {
+			font-size: 160%;
+	    display: inline-block;
+	    vertical-align: middle;
+	    color: rgba(0,0,0,0.5);
+	    position: relative;
+	    top: -1px;
+
+			@media($md) {
+				font-size: 140%;
+    		margin-right: 3px;
+			}
+		}
+
+		.icon-label {
+			display: block;
+    	font-size: 80%;
+
+			@media($md) {
+				display: inline-block;
+    		font-size: 100%;
+			}
+		}
+	}
+}
+
 // ingredients
 .ct-recipe .ing-line {
 	display: table;
