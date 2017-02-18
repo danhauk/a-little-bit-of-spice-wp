@@ -26,6 +26,41 @@ function wpurp_custom_template_test( $content, $recipe )
 
 			<ul class="clearfix">
 
+				<?php
+				$recipe_terms = array();
+				$taxonomies = WPUltimateRecipe::get()->tags();
+				unset( $taxonomies['ingredient'] );
+
+				foreach( $taxonomies as $taxonomy => $options ) {
+					if( !in_array( $taxonomy, WPUltimateRecipe::option('recipe_tags_hide_in_recipe', array() ) ) ) {
+						$terms = get_the_terms( $recipe->ID(), $taxonomy );
+						if( $terms && ! is_wp_error( $terms ) ) {
+							foreach( $terms as $term ) {
+								$recipe_terms[$term->taxonomy] = $term->name;
+							}
+						}
+					}
+				}
+				?>
+
+				<?php if ( isset( $recipe_terms['course'] ) ) { ?>
+				<li>
+					<span class="item-key">Course</span>
+					<span class="item-value" itemprop="recipeCategory" content="<?php echo $recipe_terms['course']; ?>">
+						<?php echo $recipe_terms['course']; ?>
+					</span>
+				</li>
+				<?php } ?>
+
+				<?php if ( isset ( $recipe_terms['cuisine'] ) ) { ?>
+				<li>
+					<span class="item-key">Cuisine</span>
+					<span class="item-value" itemprop="recipeCuisine" content="<?php echo $recipe_terms['cuisine']; ?>">
+						<?php echo $recipe_terms['cuisine']; ?>
+					</span>
+				</li>
+				<?php } ?>
+
 				<?php if ( $recipe->servings() ) { ?>
 				<li>
 					<span class="item-key">Yield</span>
@@ -148,6 +183,7 @@ function wpurp_custom_template_test( $content, $recipe )
 			</figure>
 		</div>
 	</div><!-- .ct-recipe -->
+
 	<?php
 
 	$output = ob_get_contents();
