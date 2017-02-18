@@ -23,6 +23,22 @@
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: 600;
 		}
+		ol,
+		ul {
+			list-style: inherit;
+    	margin: 1rem 0;
+			li {
+				margin-bottom: .75rem;
+    		list-style-position: outside;
+    		margin-left: 30px;
+			}
+		}
+		ol li {
+			list-style: decimal;
+		}
+		strong {
+			font-weight: 600;
+		}
 		img {
 			max-width: 100%;
 			height: auto;

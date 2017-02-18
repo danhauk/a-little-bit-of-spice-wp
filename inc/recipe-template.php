@@ -66,7 +66,7 @@ function wpurp_custom_template_test( $content, $recipe )
 				</li>
 				<?php } ?>
 			</ul>
-		</div>
+		</div><!-- .recipe-meta-inline -->
 
 		<div class="ing-inline" data-servings="<?php echo $recipe->servings_normalized(); ?>">
 			<h4><span>Ingredients</span></h4>
@@ -93,20 +93,59 @@ function wpurp_custom_template_test( $content, $recipe )
 						<?php echo $ingredient['unit']; ?>
 		   		</div>
 		    </div>
-			<?php endforeach;
-				// var_dump( $ingredient );
-				// $group = isset( $ingredient['group'] ) ? $ingredient['group'] : '';
-				//
-        // if( $group !== $previous_group ) {
-        //     $groups[] = $group;
-        //     $previous_group = $group;
-        // }
+			<?php endforeach; ?>
 
-			// foreach( $groups as $index => $group ) {
-			// 	echo '<h5><div class="ing-qty">'.$group.'</div></h5>';
-			// }
-			?>
+		</div><!-- .ing-inline -->
 
+		<div class="steps-inline">
+			<h4>Steps</h4>
+
+			<ol class="recipe-steps" itemprop="recipeInstructions">
+				<?php
+				$instructions = $recipe->instructions();
+
+				for( $i = 0; $i < count($instructions); $i++ ):
+					$instruction = $instructions[$i]; ?>
+
+					<li itemprop="recipeInstructions">
+						<?php
+						echo $instruction['description'];
+
+						if ( $instruction['image'] != '' ) {
+							$thumb = wp_get_attachment_image_src( $instruction['image'], 'large' );
+							$thumb_url = $thumb['0'];
+
+							$full_img = wp_get_attachment_image_src( $instruction['image'], 'full' );
+							$full_img_url = $full_img['0'];
+
+							$title_tag = WPUltimateRecipe::option( 'recipe_instruction_images_title', 'attachment' ) == 'attachment' ? esc_attr( get_the_title( $instruction['image'] ) ) : esc_attr( $instruction['description'] );
+							$alt_tag = WPUltimateRecipe::option( 'recipe_instruction_images_alt', 'attachment' ) == 'attachment' ? esc_attr( get_post_meta( $instruction['image'], '_wp_attachment_image_alt', true ) ) : esc_attr( $instruction['description'] );
+
+							echo '<figure class="img-center"><img src="' . $thumb_url . '" alt="' . $alt_tag . '" /></figure>';
+						} ?>
+					</li>
+				<?php endfor; ?>
+			</ol>
+		</div><!-- .steps-inline -->
+
+		<?php if ( $recipe->notes() ):
+			$notes = wpautop( $recipe->notes() ); ?>
+
+			<p itemprop="description">
+				<strong>Notes</strong>
+			</p>
+			<?php echo $notes; ?>
+
+		<?php endif; ?>
+
+		<div>
+			<figure class="img-center">
+				<?php
+				$recipe_thumb = wp_get_attachment_image_src( $recipe->image_ID(), $size = 'full' );
+				$recipe_image_url = $recipe_thumb[0];
+				?>
+				<img src="<?php echo $recipe_image_url; ?>" alt="<?php echo $recipe->title(); ?>" />
+			</figure>
 		</div>
 	</div><!-- .ct-recipe -->
 	<?php

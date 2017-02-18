@@ -157,8 +157,10 @@ body.single-recipe {
 	}
 }
 
-// remove checkboxes that recipe hero plugin adds
-#rh_ingredients_form input,
-#rh_ingredients_form label {
-	display: none;
+// recipe steps
+.ct-recipe ol {
+	li {
+		list-style-position: outside;
+    list-style-type: decimal;
+	}
 }

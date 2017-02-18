@@ -91,7 +91,6 @@ function a_little_bit_of_spice_setup() {
 	/**
 	 * WP Ultimate Recipe custom template
 	 */
-	add_filter( 'wpurp_output_recipe_block_recipe-ingredients', 'wpurp_custom_ingredients', 10, 3 );
 	add_filter( 'wpurp_output_recipe', 'wpurp_custom_template_test', 10, 2 );
 }
 endif;

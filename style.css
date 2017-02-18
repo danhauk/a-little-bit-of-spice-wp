@@ -1601,9 +1601,9 @@ body.single-recipe .images {
     margin-left: 3px;
     padding-left: 4px; }
 
-#rh_ingredients_form input,
-#rh_ingredients_form label {
-  display: none; }
+.ct-recipe ol li {
+  list-style-position: outside;
+  list-style-type: decimal; }
 
 @media (min-width: 768px) {
   .container .content.generic .masthead .page-header {
@@ -2056,6 +2056,19 @@ body.single-recipe .images {
 .ct-post-content {
   font-size: 18px; }
   .ct-post-content h1, .ct-post-content h2, .ct-post-content h3, .ct-post-content h4, .ct-post-content h5, .ct-post-content h6 {
+    font-weight: 600; }
+  .ct-post-content ol,
+  .ct-post-content ul {
+    list-style: inherit;
+    margin: 1rem 0; }
+    .ct-post-content ol li,
+    .ct-post-content ul li {
+      margin-bottom: .75rem;
+      list-style-position: outside;
+      margin-left: 30px; }
+  .ct-post-content ol li {
+    list-style: decimal; }
+  .ct-post-content strong {
     font-weight: 600; }
   .ct-post-content img {
     max-width: 100%;
