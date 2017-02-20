@@ -20,6 +20,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php if ( is_search() ) { ?>
+<div id="ct-container" class="container slide-animation">
+	<div class="search-page">
+
+<?php } else { ?>
 <div id="theme-container" class="site">
 	<header class="theme-header" id="theme-header" role="banner">
 		<a class="menu-trigger" id="menu-trigger"><span></span></a>
@@ -42,3 +48,4 @@
 	?>
 	<div id="content" class="container">
 		<div class="<?php echo $content_classes; ?>">
+<?php } ?>

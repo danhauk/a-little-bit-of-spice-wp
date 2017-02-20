@@ -2272,3 +2272,72 @@ body.single-recipe .images {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); }
   .react-autosuggest__suggestions .react-autosuggest__suggestions-section-name {
     border-top-color: transparent; }
+
+#ct-container {
+  left: 0;
+  position: relative; }
+  #ct-container .header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #d4d4d4;
+    min-height: 55px; }
+    @media (min-width: 768px) {
+      #ct-container .header {
+        min-height: 65px; } }
+  #ct-container .search form {
+    position: relative; }
+    #ct-container .search form .cticon-search,
+    #ct-container .search form .cancel,
+    #ct-container .search form .reset-filter {
+      color: #444;
+      font-size: 20px; }
+      @media (min-width: 768px) {
+        #ct-container .search form .cticon-search,
+        #ct-container .search form .cancel,
+        #ct-container .search form .reset-filter {
+          font-size: 28px; } }
+    #ct-container .search form .cticon-search {
+      position: absolute;
+      top: 17px;
+      left: 10px; }
+      @media (min-width: 768px) {
+        #ct-container .search form .cticon-search {
+          left: 20px; } }
+    #ct-container .search form input {
+      outline: none;
+      border: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+      font-style: normal;
+      font-weight: 600;
+      text-rendering: optimizeLegibility;
+      padding: 15px 35px 9px;
+      width: 100%;
+      font-size: 24px;
+      letter-spacing: -0.08rem; }
+      @media (min-width: 768px) {
+        #ct-container .search form input {
+          font-size: 28px;
+          padding: 17px 50px 9px; } }
+    #ct-container .search form .controls {
+      position: absolute;
+      right: 0;
+      top: 16px; }
+      @media (min-width: 768px) {
+        #ct-container .search form .controls {
+          right: 10px;
+          top: 16px; } }
+      #ct-container .search form .controls a {
+        margin-right: 10px; }
+
+body.admin-bar #ct-container .header {
+  top: 46px; }
+  @media all and (min-width: 783px) {
+    body.admin-bar #ct-container .header {
+      top: 32px; } }

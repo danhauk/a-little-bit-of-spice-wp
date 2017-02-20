@@ -1,0 +1,90 @@
+// search page
+
+#ct-container {
+	left: 0;
+	position: relative;
+
+	.header {
+		position: fixed;
+		z-index: 100;
+		width: 100%;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: #ffffff;
+		border-bottom: 1px solid #d4d4d4;
+		min-height: 55px;
+
+		@media($md) {
+			min-height: 65px;
+		}
+	}
+
+	.search form {
+		position: relative;
+
+		.cticon-search,
+		.cancel,
+		.reset-filter {
+			color: #444;
+			font-size: 20px;
+
+			@media($md) {
+				font-size: 28px;
+			}
+		}
+
+		.cticon-search {
+			position: absolute;
+			top: 17px;
+			left: 10px;
+
+			@media($md) {
+				left: 20px;
+			}
+		}
+
+		input {
+			outline: none;
+			border: none;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-family: $font-heading;
+			font-style: normal;
+			font-weight: 600;
+			text-rendering: optimizeLegibility;
+			padding: 15px 35px 9px;
+			width: 100%;
+			font-size: 24px;
+			letter-spacing: -0.08rem;
+
+			@media($md) {
+				font-size: 28px;
+				padding: 17px 50px 9px;
+			}
+		}
+
+		.controls {
+			position: absolute;
+			right: 0;
+			top: 16px;
+
+			@media($md) {
+				right: 10px;
+				top: 16px;
+			}
+
+			a {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+body.admin-bar #ct-container .header {
+	top: 46px;
+
+	@media all and (min-width: 783px) {
+		top: 32px;
+	}
+}
