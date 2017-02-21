@@ -59,7 +59,7 @@
 						<div class="ct-footer">
 							&copy; <?php echo get_bloginfo( 'name' ); ?>.
 							<div class="credit">
-								Powered by &nbsp;<a href="https://wordpress.org" target="_blank">WordPress</a>
+								Powered by <a href="https://wordpress.org" target="_blank">WordPress</a>
 							</div>
 						</div>
 					</footer>

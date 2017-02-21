@@ -1404,10 +1404,14 @@ blockquote {
         .footer .below-footer .widget {
           min-width: 750px; } }
   .footer .ct-footer {
-    font-size: 16px; }
+    color: #888;
+    font-size: 15px;
+    padding-bottom: 30px; }
     .footer .ct-footer .credit {
+      font-size: 0.65rem;
       text-transform: uppercase;
-      letter-spacing: .05rem; }
+      letter-spacing: .05rem;
+      margin: 0 0 5px; }
 
 .container .home .sidebar .blog-logo .logo-area .logo-image {
   max-width: 80%; }
