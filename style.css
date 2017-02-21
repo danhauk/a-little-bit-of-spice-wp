@@ -1611,6 +1611,169 @@ body.single-recipe .images {
   list-style-position: outside;
   list-style-type: decimal; }
 
+.ct-post-end-section {
+  clear: both; }
+
+.ct-post-actions {
+  position: relative;
+  margin-top: 50px; }
+  .ct-post-actions .ct-post-nav-content {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93) 12%, #fff 50%, #fff);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0, rgba(255, 255, 255, 0.93) 12%, #fff 50%, #fff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edffffff', endColorstr='#ffffff', GradientType=0);
+    font-weight: 400;
+    font-family: sans-serif;
+    padding: 8px 0 7px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    height: 45px;
+    line-height: 1;
+    width: 100%; }
+    @media (min-width: 768px) {
+      .ct-post-actions .ct-post-nav-content {
+        padding: 8px 0 7px; } }
+    .ct-post-actions .ct-post-nav-content a {
+      color: #777 !important;
+      border: none !important;
+      text-decoration: none !important;
+      background: transparent !important; }
+    .ct-post-actions .ct-post-nav-content .left {
+      float: left !important; }
+      .ct-post-actions .ct-post-nav-content .left .btn-follow {
+        font-size: 12px;
+        font-weight: 600; }
+        @media (min-width: 768px) {
+          .ct-post-actions .ct-post-nav-content .left .btn-follow {
+            font-size: 14px; } }
+        .ct-post-actions .ct-post-nav-content .left .btn-follow span:first-child {
+          top: 4px;
+          line-height: .8;
+          display: inline-block;
+          position: relative;
+          font-size: 22px;
+          margin-right: 2px; }
+        .ct-post-actions .ct-post-nav-content .left .btn-follow.followed span:first-child {
+          color: #ff3e68; }
+    .ct-post-actions .ct-post-nav-content .right {
+      float: right !important; }
+      .ct-post-actions .ct-post-nav-content .right a {
+        margin-right: 12px;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        display: inline-block;
+        font-size: 12px;
+        vertical-align: baseline; }
+        @media (min-width: 768px) {
+          .ct-post-actions .ct-post-nav-content .right a {
+            margin-right: 18px;
+            font-size: 14px; } }
+        .ct-post-actions .ct-post-nav-content .right a span {
+          top: 4px;
+          line-height: .8;
+          display: inline-block;
+          position: relative;
+          font-size: 22px;
+          margin-right: 2px; }
+        .ct-post-actions .ct-post-nav-content .right a:last-child {
+          margin-right: 0; }
+      .ct-post-actions .ct-post-nav-content .right .splitter {
+        display: none;
+        height: 28px;
+        margin-right: 15px;
+        border-right: 1px solid #e9e9e9; }
+        @media (min-width: 768px) {
+          .ct-post-actions .ct-post-nav-content .right .splitter {
+            display: inline-block; } }
+      .ct-post-actions .ct-post-nav-content .right .share-on-mobile {
+        display: inline-block;
+        width: 30px;
+        text-align: center; }
+        @media (min-width: 768px) {
+          .ct-post-actions .ct-post-nav-content .right .share-on-mobile {
+            display: none; } }
+        .ct-post-actions .ct-post-nav-content .right .share-on-mobile span {
+          font-size: 20px; }
+  .ct-post-actions .actions {
+    float: left; }
+    .ct-post-actions .actions a.btn-comment {
+      float: left; }
+    .ct-post-actions .actions div.share-icons {
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      -ms-transition: all .3s;
+      -o-transition: all .3s;
+      height: 30px;
+      float: right;
+      display: none;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 78px; }
+      @media (min-width: 768px) {
+        .ct-post-actions .actions div.share-icons {
+          display: block; } }
+      .ct-post-actions .actions div.share-icons a {
+        display: inline;
+        position: relative; }
+    .ct-post-actions .actions a.fb,
+    .ct-post-actions .actions a.pin {
+      margin-right: 10px;
+      color: #3a5c99 !important; }
+      .ct-post-actions .actions a.fb span,
+      .ct-post-actions .actions a.pin span {
+        font-size: 19px; }
+    .ct-post-actions .actions a.pin {
+      color: #d63734 !important; }
+    .ct-post-actions .actions a.share-more {
+      margin-right: 0; }
+      .ct-post-actions .actions a.share-more span {
+        font-size: 22px;
+        top: 4px; }
+    .ct-post-actions .actions a.tw,
+    .ct-post-actions .actions a.yum {
+      opacity: 0;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+      top: 2px; }
+    .ct-post-actions .actions a.tw {
+      color: #33ddf4 !important;
+      margin-right: 10px; }
+    .ct-post-actions .actions a.yum {
+      color: #e3641d !important; }
+  .ct-post-actions .comment-block {
+    padding: 0 0 10px; }
+    .ct-post-actions .comment-block.abs {
+      bottom: 0;
+      position: absolute;
+      width: 100%; }
+    .ct-post-actions .comment-block .ct-comment-trigger a {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: block;
+      height: 50px;
+      cursor: text !important;
+      color: #bbb !important;
+      text-decoration: none !important;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc !important;
+      background: rgba(153, 153, 153, 0.04);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+      font-family: sans-serif;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+      outline: none;
+      border-radius: 2px;
+      background-clip: padding-box;
+      padding: 10px; }
+
 @media (min-width: 768px) {
   .container .content.generic .masthead .page-header {
     width: 100%;

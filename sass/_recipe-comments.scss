@@ -1,0 +1,224 @@
+// recipe comments
+
+.ct-post-end-section {
+	clear: both;
+}
+
+.ct-post-actions {
+	position: relative;
+	margin-top: 50px;
+
+	.ct-post-nav-content {
+		-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.93), rgba(255,255,255,0.93) 12%, #fff 50%, #fff);
+    background: linear-gradient(180deg, rgba(255,255,255,0.93) 0, rgba(255,255,255,0.93) 12%, #fff 50%, #fff);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edffffff', endColorstr='#ffffff', GradientType=0);
+    font-weight: 400;
+    font-family: sans-serif;
+    padding: 8px 0 7px;
+    border-top: 1px solid rgba(0,0,0,0.12);
+    height: 45px;
+    line-height: 1;
+		width: 100%;
+		@media($md) {
+			padding: 8px 0 7px;
+		}
+
+		a {
+			color: #777 !important;
+    	border: none !important;
+    	text-decoration: none !important;
+    	background: transparent !important;
+		}
+
+		.left {
+			float: left !important;
+
+			.btn-follow {
+				font-size: 12px;
+    		font-weight: 600;
+				@media($md) {
+					font-size: 14px;
+				}
+
+				span:first-child {
+					top: 4px;
+			    line-height: .8;
+			    display: inline-block;
+			    position: relative;
+			    font-size: 22px;
+			    margin-right: 2px;
+				}
+
+				&.followed span:first-child {
+					color: #ff3e68;
+				}
+			}
+		}
+
+		.right {
+			float: right !important;
+
+			a {
+				margin-right: 12px;
+		    -webkit-transition: all .2s;
+		    -moz-transition: all .2s;
+		    -ms-transition: all .2s;
+		    -o-transition: all .2s;
+		    display: inline-block;
+		    font-size: 12px;
+		    vertical-align: baseline;
+				@media($md) {
+					margin-right: 18px;
+					font-size: 14px;
+				}
+
+				span {
+					top: 4px;
+					line-height: .8;
+					display: inline-block;
+					position: relative;
+					font-size: 22px;
+					margin-right: 2px;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			.splitter {
+				display: none;
+		    height: 28px;
+		    margin-right: 15px;
+		    border-right: 1px solid #e9e9e9;
+				@media($md) {
+					display: inline-block;
+				}
+			}
+
+			.share-on-mobile {
+				display: inline-block;
+		    width: 30px;
+		    text-align: center;
+				@media($md) {
+					display: none;
+				}
+
+				span {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+
+	.actions {
+		float: left;
+
+		a.btn-comment {
+			float: left;
+		}
+
+		div.share-icons {
+			-webkit-transition: all .3s;
+	    -moz-transition: all .3s;
+	    -ms-transition: all .3s;
+	    -o-transition: all .3s;
+	    height: 30px;
+	    float: right;
+	    display: none;
+	    overflow: hidden;
+	    white-space: nowrap;
+	    width: 78px;
+			@media($md) {
+				display: block;
+			}
+
+			a {
+				display: inline;
+    		position: relative;
+			}
+		}
+
+		a.fb,
+		a.pin {
+			margin-right: 10px;
+    	color: #3a5c99 !important;
+
+			span {
+				font-size: 19px;
+			}
+		}
+
+		a.pin {
+			color: #d63734 !important;
+		}
+
+		a.share-more {
+			margin-right: 0;
+
+			span {
+				font-size: 22px;
+				top: 4px;
+			}
+		}
+
+		a.tw,
+		a.yum {
+			opacity: 0;
+	    -webkit-transition: all .2s;
+	    -moz-transition: all .2s;
+	    -ms-transition: all .2s;
+	    -o-transition: all .2s;
+	    top: 2px;
+		}
+
+		a.tw {
+			color: #33ddf4 !important;
+    	margin-right: 10px;
+		}
+
+		a.yum {
+			color: #e3641d !important;
+		}
+	}
+
+	// comment box
+	.comment-block {
+		padding: 0 0 10px;
+
+		&.abs {
+			bottom: 0;
+	    position: absolute;
+	    width: 100%;
+		}
+
+		.ct-comment-trigger {
+			a {
+				-webkit-font-smoothing: antialiased;
+		    -moz-osx-font-smoothing: grayscale;
+		    display: block;
+		    height: 50px;
+		    cursor: text !important;
+		    color: #bbb !important;
+		    text-decoration: none !important;
+		    font-size: 16px;
+		    width: 100%;
+		    margin-bottom: 10px;
+		    border: 1px solid #ccc !important;
+		    background: rgba(153,153,153,0.04);
+		    box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+		    font-family: sans-serif;
+		    -webkit-transition: all .2s;
+		    -moz-transition: all .2s;
+		    -ms-transition: all .2s;
+		    -o-transition: all .2s;
+		    outline: none;
+		    border-radius: 2px;
+		    background-clip: padding-box;
+		    padding: 10px;
+			}
+		}
+	}
+}
