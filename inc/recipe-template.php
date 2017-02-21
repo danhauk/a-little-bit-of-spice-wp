@@ -171,7 +171,7 @@ function wpurp_custom_template_test( $content, $recipe )
 
 		<?php endif; ?>
 
-		<div>
+		<div class="recipe-finished-image">
 			<figure class="img-center">
 				<?php
 				$recipe_thumb = wp_get_attachment_image_src( $recipe->image_ID(), $size = 'full' );
