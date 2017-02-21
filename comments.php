@@ -36,7 +36,7 @@ if ( post_password_required() ) {
 							<a href="javascript:void(0)" class="btn-comment">
 								<span class="cticon-bubbles"></span>
 								<?php if ( have_comments() ) {
-									get_comments_number();
+									echo get_comments_number();
 								} else {
 									echo '0';
 								} ?>
@@ -88,7 +88,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 	</div>
-</div>
+</div><!-- #comments -->
 
 <div class="ctmodal">
 	<div class="overlay-content animatedquick easeInRight-appear">
@@ -205,46 +205,4 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 	</div>
-</div>
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'a-little-bit-of-spice' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'a-little-bit-of-spice' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'a-little-bit-of-spice' ) ); ?></div>
-
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // Check for comment navigation. ?>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'a-little-bit-of-spice' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'a-little-bit-of-spice' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'a-little-bit-of-spice' ) ); ?></div>
-
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-below -->
-		<?php
-		endif; // Check for comment navigation.
-
-	endif; // Check for have_comments().
-	?>
-
-</div><!-- #comments -->
+</div><!-- .ctmodal -->
