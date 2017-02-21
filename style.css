@@ -1496,6 +1496,15 @@ blockquote {
   .paginate .center {
     display: table-cell;
     text-align: center; }
+  .paginate .btn {
+    padding: 0; }
+    .paginate .btn a {
+      border: 0;
+      color: #fff;
+      display: block;
+      padding: 5px 10px; }
+      .paginate .btn a:hover {
+        color: #E96A1E; }
 
 .generic .flag {
   position: relative;

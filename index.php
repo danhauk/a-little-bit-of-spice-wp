@@ -48,8 +48,26 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			?>
 
+			<div class="paginate">
+				<div class="prev">
+					<span class="btn">
+						<?php if( get_next_posts_link() ) {
+							next_posts_link('<span class="cticon-back"></span> Newer Posts');
+						} ?>
+					</span>
+				</div>
+				<div class="next">
+					<span class="btn">
+						<?php if( get_previous_posts_link() ) {
+							previous_posts_link('Older Posts <span class="cticon-front"></span>');
+						} ?>
+					</span>
+				</div>
+			</div>
+
+		<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

@@ -27,7 +27,7 @@ get_header(); ?>
 
 		<?php
 		// set number of posts to display
-		$display_count = 10;
+		$display_count = 1;
 		// get current page
 		$page = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
 		// calculate offset
@@ -63,20 +63,16 @@ get_header(); ?>
 			?>
 
 			<div class="paginate">
-				<?php if ( $page != 1 ): ?>
 				<div class="prev">
-					<a class="btn" href="/page/<?php echo $page-1; ?>">
-						<span class="cticon-back"></span> Newer Posts
-					</a>
+					<span class="btn">
+						<?php next_posts_link('<span class="cticon-back"></span> Newer Posts', $recipes->max_num_pages); ?>
+					</span>
 				</div>
-				<?php endif; ?>
-				<?php if ( $page != $recipes->max_num_pages ): ?>
 				<div class="next">
-					<a class="btn" href="/page/<?php echo $page+1; ?>">
-						Older Posts <span class="cticon-front"></span>
-					</a>
+					<span class="btn">
+						<?php previous_posts_link('Older Posts <span class="cticon-front"></span>', $recipes->max_num_pages); ?>
+					</span>
 				</div>
-				<?php endif; ?>
 			</div>
 
 			<?php wp_reset_postdata();
