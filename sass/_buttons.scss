@@ -8,8 +8,14 @@
 	background:$link-primary;
 	@include border-radius(3px);
 	text-align: center;
+	font-size: 14px;
+  line-height: 1.42857143;
 	font-weight: 600;
 	display: inline-block;
+	text-transform: uppercase;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
 	&:hover{
 		color:$link-primary;
 		border-color: $link-primary;
