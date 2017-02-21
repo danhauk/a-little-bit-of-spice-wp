@@ -34,6 +34,27 @@
 		<div class="footer">
 			<div class="main-pillar">
 				<div class="content-limiter">
+					<div class="below-footer">
+						<div data-placement="below-footer" class="widget-container-below-footer widgets-below-footer">
+							<div class="widget widget-googledfp"></div>
+							<div class="widget widget-googledfp"></div>
+							<div class="widget widget-static">
+								<div class="widget widget-html">
+									<!-- Hotjar Tracking Code for http://www.alittlebitofspice.com -->
+									<script>
+									    (function(h,o,t,j,a,r){
+									        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+									        h._hjSettings={hjid:255963,hjsv:5};
+									        a=o.getElementsByTagName('head')[0];
+									        r=o.createElement('script');r.async=1;
+									        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+									        a.appendChild(r);
+									    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+									</script>
+								</div>
+							</div>
+						</div>
+					</div>
 					<footer>
 						<div class="ct-footer">
 							&copy; <?php echo get_bloginfo( 'name' ); ?>.
