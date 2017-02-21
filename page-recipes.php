@@ -27,7 +27,7 @@ get_header(); ?>
 
 		<?php
 		// set number of posts to display
-		$display_count = 1;
+		$display_count = 10;
 		// get current page
 		$page = get_query_var( 'page' ) ? get_query_var( 'page' ) : 1;
 		// calculate offset
