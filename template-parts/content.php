@@ -11,6 +11,8 @@
 
 <div class="ct-post-content">
 	<?php the_content(); ?>
+
+	<?php comments_template(); ?>
 </div><!-- #post-## -->
 
 <div class="post-meta">
