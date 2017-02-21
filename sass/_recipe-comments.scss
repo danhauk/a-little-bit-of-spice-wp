@@ -182,6 +182,21 @@
 		a.yum {
 			color: #e3641d !important;
 		}
+
+		&.expanded {
+			div.share-icons {
+				width: 120px;
+			}
+
+			a.share-more {
+				display: none;
+			}
+
+			a.tw,
+			a.yum {
+				opacity: 1;
+			}
+		}
 	}
 
 	// comment box

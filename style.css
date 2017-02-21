@@ -1750,6 +1750,13 @@ body.single-recipe .images {
       margin-right: 10px; }
     .ct-post-actions .actions a.yum {
       color: #e3641d !important; }
+    .ct-post-actions .actions.expanded div.share-icons {
+      width: 120px; }
+    .ct-post-actions .actions.expanded a.share-more {
+      display: none; }
+    .ct-post-actions .actions.expanded a.tw,
+    .ct-post-actions .actions.expanded a.yum {
+      opacity: 1; }
   .ct-post-actions .comment-block {
     padding: 0 0 10px; }
     .ct-post-actions .comment-block.abs {

@@ -10,6 +10,8 @@ var spice = {
 	bindEvents: function() {
 		$( '.ct-comment-trigger, .btn-comment' ).on( 'click', spice.openComments );
 		$( '.ctmodal .close-panel' ).on( 'click', spice.closeComments );
+		$( '.share-more' ).on( 'hover', spice.shareMore );
+		$( '.share-icons' ).on( 'mouseleave', spice.shareMoreHide );
 	},
 
 	openComments: function() {
@@ -23,6 +25,14 @@ var spice = {
 		setTimeout( function() {
 			$( '.ctmodal' ).hide();
 		}, 300 );
+	},
+
+	shareMore: function() {
+		$( '.ct-post-actions .actions' ).addClass( 'expanded' );
+	},
+
+	shareMoreHide: function() {
+		$( '.ct-post-actions .actions' ).removeClass( 'expanded' );
 	}
 }
 
