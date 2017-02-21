@@ -95,7 +95,7 @@ if ( post_password_required() ) {
 		<div class="overlay-header">
 			<h3><?php the_title(); ?></h3>
 			<div class="right clearfix">
-				<a class="close-panel" href="#">
+				<a class="close-panel" href="javascript:;">
 					<span class="cticon-cross"></span>
 				</a>
 			</div>

@@ -225,6 +225,7 @@
 
 // modal
 .ctmodal {
+	display: none;
 	font-family: sans-serif;
   pointer-events: all;
   position: fixed;
@@ -533,4 +534,95 @@ body.admin-bar .ctmodal .overlay-content {
 			}
 		}
 	}
+}
+
+// animation for modal
+.easeInRight-appear,
+.easeInRight-enter {
+	-webkit-animation-name: easeInRight;
+  animation-name: easeInRight;
+}
+
+.animatedquick {
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@-webkit-keyframes easeInRight {
+    0%,to {
+        -webkit-transition-timing-function: cubic-bezier(1, 1);
+        transition-timing-function: cubic-bezier(1, 1)
+    }
+
+    0% {
+        opacity: .5;
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0)
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes easeInRight {
+    0%,to {
+        -webkit-transition-timing-function: cubic-bezier(1, 1);
+        transition-timing-function: cubic-bezier(1, 1)
+    }
+
+    0% {
+        opacity: .5;
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0)
+    }
+
+    to {
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+.easeInRight-leave {
+    -webkit-animation-name: easeOutRight;
+    animation-name: easeOutRight
+}
+
+@-webkit-keyframes easeOutRight {
+    0%,to {
+        -webkit-transition-timing-function: cubic-bezier(1, 1);
+        transition-timing-function: cubic-bezier(1, 1)
+    }
+
+    0% {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0)
+    }
+}
+
+@keyframes easeOutRight {
+    0%,to {
+        -webkit-transition-timing-function: cubic-bezier(1, 1);
+        transition-timing-function: cubic-bezier(1, 1)
+    }
+
+    0% {
+        -webkit-transform: none;
+        transform: none
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0)
+    }
 }
