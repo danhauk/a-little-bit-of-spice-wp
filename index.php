@@ -52,18 +52,18 @@ get_header(); ?>
 
 			<div class="paginate">
 				<div class="prev">
-					<span class="btn">
-						<?php if( get_next_posts_link() ) {
-							next_posts_link('<span class="cticon-back"></span> Newer Posts');
-						} ?>
-					</span>
+					<?php if( get_previous_posts_link() ) {
+						echo '<span class="btn">';
+						previous_posts_link('<span class="cticon-back"></span> Newer Posts');
+						echo '</span>';
+					} ?>
 				</div>
 				<div class="next">
-					<span class="btn">
-						<?php if( get_previous_posts_link() ) {
-							previous_posts_link('Older Posts <span class="cticon-front"></span>');
-						} ?>
-					</span>
+					<?php if( get_next_posts_link() ) {
+						echo '<span class="btn">';
+						next_posts_link('Older Posts <span class="cticon-front"></span>');
+						echo '</span>';
+					} ?>
 				</div>
 			</div>
 
