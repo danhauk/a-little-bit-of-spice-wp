@@ -147,8 +147,18 @@ if ( post_password_required() ) {
 									</p>
 									<div class="timestamp">
 										<span class="stamp">
-											<time itemprop="datePublished" content="<?php echo $comment->comment_date_gmt; ?>" class="timeago" datetime="<?php echo $comment->comment_date_gmt; ?>" title="August 15th 2016, 3:06:59 pm">
-												<?php echo $comment->comment_date_gmt; ?>
+											<?php
+											$timestamp = strtotime( $comment->comment_date );
+											if ( $timestamp > date( 'U' ) - 60*60*24*365 ) {
+												// if current date is over a year, show time ago
+												$timeago = human_time_diff( $timestamp, current_time('timestamp') ) . ' ago';
+											} else {
+												// otherwise, show full date
+												$timeago = date( 'F jS, Y', $timestamp );
+											}
+											?>
+											<time itemprop="datePublished" content="<?php echo $comment->comment_date; ?>" class="timeago" datetime="<?php echo $comment->comment_date; ?>" title="<?php echo date( 'F jS Y, H:i:s', $timestamp ); ?>">
+												<?php echo $timeago; ?>
 											</time>
 										</span>
 									</div>
