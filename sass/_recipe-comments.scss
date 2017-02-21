@@ -111,6 +111,12 @@
 				}
 			}
 		}
+
+		&.share-expanded {
+			.right .share-on-mobile span::before {
+				content: '\E611';
+			}
+		}
 	}
 
 	.actions {
@@ -184,7 +190,12 @@
 		}
 
 		&.expanded {
+			a.btn-comment {
+				display: none;
+			}
+
 			div.share-icons {
+				display: block;
 				width: 120px;
 			}
 
@@ -195,6 +206,12 @@
 			a.tw,
 			a.yum {
 				opacity: 1;
+			}
+
+			@media($md) {
+				a.btn-comment {
+					display: inline-block;
+				}
 			}
 		}
 	}

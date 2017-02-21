@@ -1702,6 +1702,8 @@ body.single-recipe .images {
             display: none; } }
         .ct-post-actions .ct-post-nav-content .right .share-on-mobile span {
           font-size: 20px; }
+    .ct-post-actions .ct-post-nav-content.share-expanded .right .share-on-mobile span::before {
+      content: '\E611'; }
   .ct-post-actions .actions {
     float: left; }
     .ct-post-actions .actions a.btn-comment {
@@ -1750,13 +1752,19 @@ body.single-recipe .images {
       margin-right: 10px; }
     .ct-post-actions .actions a.yum {
       color: #e3641d !important; }
+    .ct-post-actions .actions.expanded a.btn-comment {
+      display: none; }
     .ct-post-actions .actions.expanded div.share-icons {
+      display: block;
       width: 120px; }
     .ct-post-actions .actions.expanded a.share-more {
       display: none; }
     .ct-post-actions .actions.expanded a.tw,
     .ct-post-actions .actions.expanded a.yum {
       opacity: 1; }
+    @media (min-width: 768px) {
+      .ct-post-actions .actions.expanded a.btn-comment {
+        display: inline-block; } }
   .ct-post-actions .comment-block {
     padding: 0 0 10px; }
     .ct-post-actions .comment-block.abs {

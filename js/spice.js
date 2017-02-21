@@ -12,6 +12,7 @@ var spice = {
 		$( '.ctmodal .close-panel' ).on( 'click', spice.closeComments );
 		$( '.share-more' ).on( 'hover', spice.shareMore );
 		$( '.share-icons' ).on( 'mouseleave', spice.shareMoreHide );
+		$( '.share-on-mobile' ).on( 'click', spice.shareMobile );
 	},
 
 	openComments: function() {
@@ -28,11 +29,21 @@ var spice = {
 	},
 
 	shareMore: function() {
+		$( '.ct-post-nav-content' ).addClass( 'share-expanded' );
 		$( '.ct-post-actions .actions' ).addClass( 'expanded' );
 	},
 
 	shareMoreHide: function() {
+		$( '.ct-post-nav-content' ).removeClass( 'share-expanded' );
 		$( '.ct-post-actions .actions' ).removeClass( 'expanded' );
+	},
+
+	shareMobile: function() {
+		if ( $( '.ct-post-nav-content' ).hasClass( 'share-expanded' ) ) {
+			spice.shareMoreHide();
+		} else {
+			spice.shareMore();
+		}
 	}
 }
 
