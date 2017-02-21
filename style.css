@@ -975,6 +975,12 @@ blockquote {
     .like-btn, .note-btn {
       margin-top: 8px; } }
 
+.btn-sm,
+.btn-xs {
+  padding: 5px 8px;
+  font-size: 11px;
+  line-height: 1.2; }
+
 .img-holder {
   margin-top: 1.5rem;
   overflow: hidden; }
@@ -1773,6 +1779,247 @@ body.single-recipe .images {
       border-radius: 2px;
       background-clip: padding-box;
       padding: 10px; }
+
+.ctmodal {
+  font-family: sans-serif;
+  pointer-events: all;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5000 !important;
+  transition: opacity .25s ease-in-out; }
+  .ctmodal .overlay-content {
+    max-width: 600px;
+    background: #fff;
+    position: absolute;
+    right: 0 !important; }
+    @media (min-width: 768px) {
+      .ctmodal .overlay-content {
+        width: 600px; } }
+    .ctmodal .overlay-content ul, .ctmodal .overlay-content ol {
+      margin: 0;
+      list-style: none; }
+      .ctmodal .overlay-content ul li, .ctmodal .overlay-content ol li {
+        margin: 0; }
+    .ctmodal .overlay-content .overlay-header {
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+      padding: .75rem .65rem;
+      background: #f6f6f6;
+      position: relative;
+      border-bottom: 1px solid rgba(212, 212, 212, 0.5);
+      right: 0;
+      height: 58px;
+      font-family: sans-serif; }
+      @media (min-width: 768px) {
+        .ctmodal .overlay-content .overlay-header {
+          padding: .75rem 1rem; } }
+      .ctmodal .overlay-content .overlay-header h3 {
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        max-width: 60%;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: none;
+        letter-spacing: -0.01rem;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.4);
+        position: relative; }
+        @media (min-width: 768px) {
+          .ctmodal .overlay-content .overlay-header h3 {
+            max-width: 80%;
+            font-size: 1.2rem; } }
+      .ctmodal .overlay-content .overlay-header .right {
+        bottom: 12px;
+        float: right;
+        margin-top: -7px;
+        overflow: visible; }
+        @media (min-width: 768px) {
+          .ctmodal .overlay-content .overlay-header .right {
+            right: 1.5rem; } }
+        .ctmodal .overlay-content .overlay-header .right .close-panel {
+          text-decoration: none;
+          margin: 0 0 0 10px;
+          line-height: 2;
+          font-size: 1.6rem;
+          color: rgba(0, 0, 0, 0.4); }
+    .ctmodal .overlay-content .overlay-body {
+      padding: 1rem;
+      width: 100%;
+      position: absolute;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+      top: 58px;
+      bottom: 0; }
+      @media (min-width: 768px) {
+        .ctmodal .overlay-content .overlay-body {
+          padding: 1rem 2rem; } }
+
+.ctmodal,
+.ctmodal .overlay-content {
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+.sectional {
+  display: block;
+  border-bottom: 2px solid #e9e9e9;
+  position: relative; }
+  .sectional::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+  .sectional .active {
+    pointer-events: none;
+    border-bottom: 2px solid #444; }
+    .sectional .active a, .sectional .active h5 {
+      color: #444; }
+  .sectional ul.items li {
+    float: left;
+    margin-right: 15px;
+    line-height: 1.5;
+    position: relative;
+    bottom: -2px; }
+    @media (min-width: 768px) {
+      .sectional ul.items li {
+        margin-right: 20px; } }
+    .sectional ul.items li:last-child {
+      margin-right: 0; }
+  .sectional h5 {
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: sans-serif;
+    letter-spacing: .02rem;
+    display: inline-block;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    border-bottom: 2px solid transparent; }
+
+body.admin-bar .ctmodal .overlay-content {
+  top: 32px; }
+
+#post-comments {
+  font-family: sans-serif;
+  clear: both; }
+  #post-comments .comment-block {
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    padding: 5px 0 0; }
+    #post-comments .comment-block.comment-item:first-child {
+      padding-top: 20px !important; }
+    #post-comments .comment-block .ct-usr {
+      float: left; }
+    #post-comments .comment-block img.tiny-profile {
+      width: 36px;
+      height: 36px;
+      float: left;
+      margin-top: 2px;
+      border-radius: 50%;
+      background-clip: padding-box; }
+    #post-comments .comment-block .comment,
+    #post-comments .comment-block .comment-notes {
+      padding-left: 50px;
+      padding-bottom: 5px;
+      line-height: 1.2;
+      position: relative; }
+    #post-comments .comment-block .comment-notes {
+      color: #a2a2a2;
+      font-size: .8rem; }
+    #post-comments .comment-block p {
+      font-size: .85rem;
+      line-height: 1.4;
+      margin: 0;
+      margin-bottom: 3px;
+      color: #444;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      #post-comments .comment-block p a {
+        color: #a2a2a2;
+        text-decoration: underline !important; }
+    #post-comments .comment-block .commenter {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600; }
+      #post-comments .comment-block .commenter a {
+        color: rgba(0, 0, 0, 0.9);
+        text-decoration: none !important; }
+    #post-comments .comment-block .timestamp {
+      position: relative;
+      font-size: .7rem;
+      color: #a2a2a2;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      @media (min-width: 768px) {
+        #post-comments .comment-block .timestamp {
+          -webkit-transition: all .2s;
+          -moz-transition: all .2s;
+          -ms-transition: all .2s;
+          -o-transition: all .2s;
+          opacity: 0; } }
+    #post-comments .comment-block:hover .timestamp {
+      opacity: 1; }
+    #post-comments .comment-block .comment-form {
+      margin-top: 10px; }
+    #post-comments .comment-block .comment-content textarea,
+    #post-comments .comment-block .comment-content input {
+      width: 100%;
+      border: 1px solid #ccc !important;
+      background: rgba(153, 153, 153, 0.04);
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+      font-family: sans-serif;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+      outline: none;
+      border-radius: 2px;
+      background-clip: padding-box;
+      padding: 10px;
+      font-size: .85rem;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      #post-comments .comment-block .comment-content textarea:hover, #post-comments .comment-block .comment-content textarea:focus,
+      #post-comments .comment-block .comment-content input:hover,
+      #post-comments .comment-block .comment-content input:focus {
+        background: #fff;
+        border: 1px solid #999 !important; }
+    #post-comments .comment-block .comment-content span.required {
+      position: absolute;
+      top: 15px;
+      left: 54px;
+      font-size: .9rem;
+      color: #a2a2a2; }
+    #post-comments .comment-block .post-note,
+    #post-comments .comment-block .form-submit {
+      margin: 2px 0 0; }
+      #post-comments .comment-block .post-note .btn.post-this,
+      #post-comments .comment-block .form-submit .btn.post-this {
+        float: right; }
 
 @media (min-width: 768px) {
   .container .content.generic .masthead .page-header {

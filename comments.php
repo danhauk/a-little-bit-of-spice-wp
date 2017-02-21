@@ -88,6 +88,124 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="ctmodal">
+	<div class="overlay-content animatedquick easeInRight-appear">
+		<div class="overlay-header">
+			<h3><?php the_title(); ?></h3>
+			<div class="right clearfix">
+				<a class="close-panel" href="#">
+					<span class="cticon-cross"></span>
+				</a>
+			</div>
+		</div>
+		<div class="overlay-body">
+			<div class="comment-proof">
+				<div class="sectional">
+					<ul class="items">
+						<li class="active">
+							<h5>
+								<span class="comment-count">
+									<?php echo comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>
+								</span>
+							</h5>
+						</li>
+					</ul>
+				</div>
+				<div id="post-comments" class="overlay-comments">
+					<div class="comments-list clearfix">
+						<ul>
+							<?php
+							$post_comments = get_comments();
+							foreach( $post_comments as $comment ): ?>
+							<li class="comment-block comment-item" id="comment-<?php echo $comment->comment_ID; ?>">
+
+								<?php if ( $comment->comment_author_url ): ?>
+									<a class="ct-usr" href="<?php echo $comment->comment_author_url; ?>">
+										<?php echo get_avatar( $comment->comment_author_email, 50, '', $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
+									</a>
+								<?php else: ?>
+									<span class="ct-usr">
+										<?php echo get_avatar( $comment->comment_author_email, 50, '', $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
+									</span>
+								<?php endif; ?>
+
+								<div class="comment" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+									<p>
+										<span class="commenter">
+											<meta itemprop="author" content="<?php echo $comment->comment_author; ?>">
+											<?php if ( $comment->comment_author_url ): ?>
+												<a href="<?php echo $comment->comment_author_url; ?>"><?php echo $comment->comment_author; ?></a>
+											<?php else: ?>
+												<?php echo $comment->comment_author; ?>
+											<?php endif; ?>
+										</span>
+										<span itemprop="reviewBody" class="comment-text expandable">
+											<?php echo $comment->comment_content; ?>
+										</span>
+									</p>
+									<div class="timestamp">
+										<span class="stamp">
+											<time itemprop="datePublished" content="<?php echo $comment->comment_date_gmt; ?>" class="timeago" datetime="<?php echo $comment->comment_date_gmt; ?>" title="August 15th 2016, 3:06:59 pm">
+												<?php echo $comment->comment_date_gmt; ?>
+											</time>
+										</span>
+									</div>
+									<meta itemprop="itemReviewed" content="<?php the_title(); ?>">
+								</div>
+							</li>
+							<?php endforeach; ?>
+
+							<li class="comment-block comment-form-block" style="display: block;">
+								<?php
+								$current_user = wp_get_current_user();
+								$commenter = wp_get_current_commenter();
+								$req = get_option( 'require_name_email' );
+								$aria_req = ( $req ? " aria-required='true'" : '' );
+
+								$fields =  array(
+								  'author' =>
+								    '<div class="comment-content comment">' .
+										( $req ? '<span class="required">*</span>' : '' ) .
+								    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+								    '" size="30" placeholder="Your name"' . $aria_req . ' /></div>',
+
+								  'email' =>
+								    '<div class="comment-content comment">' .
+										( $req ? '<span class="required">*</span>' : '' ) .
+								    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+								    '" size="30" placeholder="Email address"' . $aria_req . ' /></div>',
+
+								  'url' =>
+								    '<div class="comment-content comment">' .
+								    '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+								    '" size="30" placeholder="Your website" /></div>',
+								);
+								$comment_form_args = array(
+									'class_submit' => 'btn btn-success btn-sm post-this submit-help',
+									'label_submit' => 'Post Comment',
+									'comment_field' => '<div class="comment-content comment"><span class="required">*</span><textarea id="comment" name="comment" aria-required="true" placeholder="Leave a comment..." style="height: 98px;"></textarea></div>',
+									'title_reply' => '',
+									'title_reply_before' => '',
+									'title_reply_after' => '',
+									'logged_in_as' => '<div class="dp">'.
+																			'<span class="ct-usr">'.
+																				get_avatar( $current_user->user_email, 50, '', $current_user->display_name, array( 'class' => 'tiny-profile' ) ).
+																			'</span>'.
+																		'</div>',
+									'fields' => apply_filters( 'comment_form_default_fields', $fields )
+								);
+
+								comment_form( $comment_form_args ); ?>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 	<?php
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
