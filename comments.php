@@ -117,7 +117,7 @@ if ( post_password_required() ) {
 					<div class="comments-list clearfix">
 						<ul>
 							<?php
-							$post_comments = get_comments();
+							$post_comments = get_comments( array( 'post_id' => get_the_ID() ) );
 							foreach( $post_comments as $comment ): ?>
 							<li class="comment-block comment-item" id="comment-<?php echo $comment->comment_ID; ?>">
 
