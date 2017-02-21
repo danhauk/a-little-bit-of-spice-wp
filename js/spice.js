@@ -16,8 +16,8 @@ var spice = {
 	},
 
 	openComments: function() {
-		$( '.ctmodal' ).show();
-		$( '.ctmodal .overlay-content' ).addClass( 'easeInRight-appear' );
+		$( '.ctmodal' ).show().css( 'opacity', 1 );
+		$( '.ctmodal .overlay-content' ).removeClass( 'easeInRight-leave' ).addClass( 'easeInRight-appear' );
 	},
 
 	closeComments: function() {
