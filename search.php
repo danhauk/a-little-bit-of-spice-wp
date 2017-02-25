@@ -71,9 +71,9 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;
+			?>
 
-			the_posts_navigation();
-
+		<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -81,6 +81,14 @@ get_header(); ?>
 		endif; ?>
 
 							</div>
+						</div>
+
+						<div class="endless_container">
+							<?php if( get_next_posts_link() ) {
+								echo '<span class="btn endless_more load-more auto-load">';
+								next_posts_link('Show more posts');
+								echo '</span>';
+							} ?>
 						</div>
 					</div>
 				</div>
