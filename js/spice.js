@@ -4,10 +4,11 @@ var spice = {
 	init: function() {
 		var handler;
 
-		$( '.search-container .cards-container' ).masonry( {
-			columnWidth: '.card',
-			itemSelector: '.card'
-		});
+		// $( '.search-container .cards-container' ).masonry( {
+		// 	columnWidth: '.card',
+		// 	itemSelector: '.card'
+		// });
+		spice.infiniteSearch();
 		spice.bindEvents();
 	},
 
@@ -48,6 +49,16 @@ var spice = {
 		} else {
 			spice.shareMore();
 		}
+	},
+
+	infiniteSearch: function() {
+		var count = 2;
+	  $(window).scroll(function(){
+			if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+				loadArticle(count);
+				count++;
+			}
+	  });
 	}
 }
 

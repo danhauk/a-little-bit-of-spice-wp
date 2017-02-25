@@ -73,5 +73,48 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript">
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+function loadArticle(pageNumber) {
+	var sQuery = getUrlParameter( 's' );
+	var total = <?php echo $wp_query->max_num_pages; ?>;
+	console.log(total);
+
+	if ( pageNumber > total ) {
+		return false;
+	} else {
+		jQuery('.endless_container .auto-load a').text( 'Loading More Posts' );
+	  jQuery.ajax({
+	      url: "<?php bloginfo('wpurl') ?>/wp-admin/admin-ajax.php",
+	      type:'POST',
+	      data: "action=infinite_scroll&page_no="+ pageNumber + '&total=' + total + '&s=' + sQuery,
+	      success: function(html){
+					if ( pageNumber + 1 > total ) {
+						jQuery('.endless_container').remove();
+					} else {
+						jQuery('.endless_container .auto-load a').text( 'Show More Posts' );
+					}
+					jQuery(".search-container .cards-container").append(html);
+	      }
+	  });
+		return false;
+	}
+}
+</script>
+
 </body>
 </html>

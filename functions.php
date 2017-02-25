@@ -139,7 +139,7 @@ function a_little_bit_of_spice_scripts() {
 
 	wp_enqueue_script( 'a-little-bit-of-spice-masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ) );
 
-	wp_enqueue_script( 'a-litt-bit-of-spice-app', get_template_directory_uri() . '/js/spice.js', array( 'jquery' ) );
+	wp_enqueue_script( 'a-little-bit-of-spice-app', get_template_directory_uri() . '/js/spice.js', array( 'jquery' ) );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -178,3 +178,18 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/authors-widget.php';
 
 require get_template_directory() . '/inc/recipe-template.php';
+
+function wp_infinitepaginate(){
+    $loopFile        = $_POST['loop_file'];
+    $paged           = $_POST['page_no'];
+		$query           = $_POST['s'];
+    $posts_per_page  = get_option('posts_per_page');
+
+    # Load the posts
+    query_posts(array('paged' => $paged, 's' => $query ));
+    get_template_part( 'template-parts/loop', 'search' );
+
+    exit;
+}
+add_action('wp_ajax_infinite_scroll', 'wp_infinitepaginate');           // for logged in user
+add_action('wp_ajax_nopriv_infinite_scroll', 'wp_infinitepaginate');    // if user not logged in
