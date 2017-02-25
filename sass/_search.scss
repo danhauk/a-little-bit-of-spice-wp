@@ -276,11 +276,14 @@
 				}
 
 				.cards-container {
+					display: flex;
+					flex-wrap: wrap;
 					margin: 0.5em -0.5em 80px;
 					width: auto;
 				}
 
 				.card {
+					display: flex;
 					padding: .25em;
 					width: 50%;
 					float: left;
@@ -298,7 +301,7 @@
 					}
 
 					article {
-						display: block;
+						display: flex;
     				position: relative;
 
 						.container {
@@ -464,7 +467,6 @@
 		margin-bottom: 1rem;
     background-color: rgba(0,0,0,0.03);
     display: inline-block;
-    padding: .4rem .8rem;
 		border: 0;
     color: rgba(0,0,0,0.2);
     font-size: 1rem;
@@ -485,6 +487,8 @@
 		a {
 			border: 0;
 			color: rgba(0,0,0,0.2);
+			display: block;
+			padding: .4rem .8rem;
 		}
 
 		&:hover {

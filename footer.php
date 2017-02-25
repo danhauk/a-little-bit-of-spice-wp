@@ -92,7 +92,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 function loadArticle(pageNumber) {
 	var sQuery = getUrlParameter( 's' );
 	var total = <?php echo $wp_query->max_num_pages; ?>;
-	console.log(total);
 
 	if ( pageNumber > total ) {
 		return false;

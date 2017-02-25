@@ -3038,9 +3038,12 @@ body.admin-bar .ctmodal .overlay-content {
           width: 100%;
           text-align: center; }
         #ct-container .search-page .search-container .result-posts .cards-container {
+          display: flex;
+          flex-wrap: wrap;
           margin: 0.5em -0.5em 80px;
           width: auto; }
         #ct-container .search-page .search-container .result-posts .card {
+          display: flex;
           padding: .25em;
           width: 50%;
           float: left; }
@@ -3057,7 +3060,7 @@ body.admin-bar .ctmodal .overlay-content {
               padding: .45em;
               width: 33.33%; } }
           #ct-container .search-page .search-container .result-posts .card article {
-            display: block;
+            display: flex;
             position: relative; }
             #ct-container .search-page .search-container .result-posts .card article .container {
               border: 1px solid rgba(0, 0, 0, 0.15);
@@ -3181,7 +3184,6 @@ body.admin-bar .ctmodal .overlay-content {
     margin-bottom: 1rem;
     background-color: rgba(0, 0, 0, 0.03);
     display: inline-block;
-    padding: .4rem .8rem;
     border: 0;
     color: rgba(0, 0, 0, 0.2);
     font-size: 1rem;
@@ -3200,7 +3202,9 @@ body.admin-bar .ctmodal .overlay-content {
         min-width: 350px; } }
     #ct-container .auto-load a {
       border: 0;
-      color: rgba(0, 0, 0, 0.2); }
+      color: rgba(0, 0, 0, 0.2);
+      display: block;
+      padding: .4rem .8rem; }
     #ct-container .auto-load:hover {
       background-color: rgba(0, 0, 0, 0.06); }
       #ct-container .auto-load:hover a {

@@ -1,5 +1,7 @@
 ;(function($) {
 
+var searchPageCount = 2;
+
 var spice = {
 	init: function() {
 		var handler;
@@ -18,6 +20,7 @@ var spice = {
 		$( '.share-more' ).on( 'hover', spice.shareMore );
 		$( '.share-icons' ).on( 'mouseleave', spice.shareMoreHide );
 		$( '.share-on-mobile' ).on( 'click', spice.shareMobile );
+		$( '.endless_container .load-more a').on( 'click', spice.loadMoreSearch );
 	},
 
 	openComments: function() {
@@ -51,12 +54,18 @@ var spice = {
 		}
 	},
 
+	loadMoreSearch: function(e) {
+		e.preventDefault();
+
+		loadArticle(searchPageCount);
+		searchPageCount++;
+	},
+
 	infiniteSearch: function() {
-		var count = 2;
 	  $(window).scroll(function(){
 			if  ($(window).scrollTop() == $(document).height() - $(window).height()){
-				loadArticle(count);
-				count++;
+				loadArticle(searchPageCount);
+				searchPageCount++;
 			}
 	  });
 	}
