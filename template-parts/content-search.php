@@ -21,8 +21,15 @@
 				<div class="post-info">
 					<a class="info-toggle cticon-cross toggle-meta"></a>
 					<div class="container">
-						<h5>Diet</h5>
-						<span><a href="javascript:void(0);">non-vegetarian</a></span>
+						<h5>Category</h5>
+						<?php
+						$exclude_cats = array('difficulty', 'ingredients', 'diet', 'cooking-time', 'preparation-time');
+						foreach( get_categories() as $category ) {
+							if ( !$category->parent && !in_array($category->slug, $exclude_cats) ) {
+								echo "<span><a href='/category/{$category->slug}'>{$category->name}</a></span>";
+							}
+						}
+						?>
 					</div>
 				</div>
 			</div>
