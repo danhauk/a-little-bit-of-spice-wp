@@ -2942,7 +2942,8 @@ body.admin-bar .ctmodal .overlay-content {
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           color: #888;
-          margin-left: 0; }
+          margin-left: 0;
+          text-transform: capitalize; }
           @media (min-width: 768px) {
             #ct-container .search-page .search-filters li a.option {
               display: inline-block; } }
@@ -2969,6 +2970,8 @@ body.admin-bar .ctmodal .overlay-content {
             float: right;
             width: 100%;
             max-width: 180px; } }
+        #ct-container .search-page .search-filters li .select-style option {
+          text-transform: capitalize; }
     #ct-container .search-page .filter-header {
       display: none;
       height: 54px;

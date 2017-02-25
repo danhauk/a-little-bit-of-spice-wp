@@ -151,6 +151,7 @@
 			    -moz-osx-font-smoothing: grayscale;
 			    color: #888;
 			    margin-left: 0;
+					text-transform: capitalize;
 					@media($md) {
 						display: inline-block;
 					}
@@ -185,6 +186,10 @@
 						float: right;
 						width: 100%;
 						max-width: 180px;
+					}
+
+					option {
+						text-transform: capitalize;
 					}
 				}
 			}
