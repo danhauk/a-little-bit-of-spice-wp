@@ -9,22 +9,32 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php a_little_bit_of_spice_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php a_little_bit_of_spice_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+<div class="card">
+	<article>
+		<div class="container">
+			<div class="img-shell">
+				<a href="<?php echo esc_url( get_permalink() ); ?>">
+					<span class="fade-In img-holder">
+						<?php the_post_thumbnail(); ?>
+					</span>
+				</a>
+				<div class="post-info">
+					<a class="info-toggle cticon-cross toggle-meta"></a>
+					<div class="container">
+						<h5>Diet</h5>
+						<span><a href="javascript:void(0);">non-vegetarian</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="text-area">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" class="dummy-link"></a>
+				<h4>
+					<a href="<?php echo esc_url( get_permalink() ); ?>">
+						<?php the_title(); ?>
+					</a>
+				</h4>
+				<p><?php the_excerpt(); ?></p>
+			</div>
+		</div>
+	</article>
+</div>

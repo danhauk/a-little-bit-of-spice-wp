@@ -17,12 +17,12 @@
 		<header class="header ctheader animate-transform no-scroll search">
 			<form id="searchid_form" method="GET" action="/">
 				<span class="cticon-search"></span>
-				<input id="q" name="q" type="textarea" value="<?php echo ( isset( $_GET['s'] ) ? $_GET['s'] : '' ); ?>" placeholder="Search" class="noauto" autocomplete="off">
+				<input id="s" name="s" type="textarea" value="<?php echo ( isset( $_GET['s'] ) ? $_GET['s'] : '' ); ?>" placeholder="Search" class="noauto" autocomplete="off">
 				<div class="controls right">
 					<a href="#" class="reset-filter reset hide" style="display: none;">
 						<span class="cticon-filter-reset"></span>
 					</a>
-					<a href="#" class="cancel" data-action="http://www.alittlebitofspice.com/">
+					<a href="<?php echo get_bloginfo( 'url' ); ?>" class="cancel">
 						<span class="cticon-cross"></span>
 					</a>
 				</div>

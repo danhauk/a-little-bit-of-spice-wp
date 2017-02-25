@@ -4,6 +4,10 @@ var spice = {
 	init: function() {
 		var handler;
 
+		$( '.search-container .cards-container' ).masonry( {
+			columnWidth: '.card',
+			itemSelector: '.card'
+		});
 		spice.bindEvents();
 	},
 

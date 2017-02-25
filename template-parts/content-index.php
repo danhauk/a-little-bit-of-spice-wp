@@ -18,7 +18,7 @@
 		<div class="snippet-wrapper">
 			<div class="img-holder">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" class="thumb img-link">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( 'medium_large' ); ?>
 				</a>
 			</div>
 			<div class="text-holder">

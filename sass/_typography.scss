@@ -148,3 +148,67 @@ blockquote{
 		@media($sm){font-size: 14px;}
 	}
 	.meta:first-letter{text-transform: uppercase;}
+
+#ct-container {
+	h5 {
+		font-size: 1rem;
+		width: 100%;
+		display: block;
+		text-transform: uppercase;
+		letter-spacing: .05rem;
+		word-spacing: .2rem;
+		color: #8d8d8d;
+		margin: 1rem 0 .5rem;
+		clear: both;
+		font-family: "Helvetica",sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+
+	.sectional {
+		a {
+			color: #a2a2a2;
+		}
+
+		h5 {
+			margin: 0;
+	    font-size: 14px;
+	    letter-spacing: .02rem;
+	    display: inline-block;
+	    width: auto;
+	    font-weight: 600;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    border-bottom: 2px solid transparent;
+		}
+
+		.active {
+			a {
+				color: #444;
+			}
+		}
+
+		.info {
+			float: right;
+	    display: inline-block;
+	    color: #d4d4d4;
+	    font-size: 16px;
+
+			li {
+				display: inline-block;
+    		margin: 0 8px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			a {
+				position: relative;
+    		top: 4px;
+			}
+		}
+	}
+}
