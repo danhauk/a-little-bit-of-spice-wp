@@ -142,6 +142,7 @@
 				margin: 0;
 
 				a.option {
+					border: 0;
 					font-size: .8rem;
 			    display: block;
 			    position: relative;
@@ -175,6 +176,15 @@
 						&::before {
 							opacity: .5;
 						}
+					}
+				}
+
+				.select-style {
+					@media($md) {
+						font-size: .8rem;
+						float: right;
+						width: 100%;
+						max-width: 180px;
 					}
 				}
 			}
@@ -498,6 +508,26 @@
 				text-decoration: none;
 				color: rgba(0,0,0,0.4)!important;
 			}
+		}
+	}
+
+	.select-style {
+		border: 1px solid #ccc;
+    max-width: 200px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJCAYAAADkZNYtAAAAGXRFW…OB+C3UD2+h/L+4QuMbEPtCrfeF8uGABYvvXwOxJ7ZgAQgwAHvkGWCDXyS+AAAAAElFTkSuQmCC) no-repeat 96% 50%;
+
+		select {
+			padding: 2px 8px;
+	    width: 100%;
+	    border: none;
+	    box-shadow: none;
+	    background: transparent;
+	    background-image: none;
+	    -webkit-appearance: none;
+	    font-size: inherit;
+	    color: inherit;
 		}
 	}
 }

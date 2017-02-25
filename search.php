@@ -24,10 +24,70 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="filter-container">
+						<?php $categories = get_categories(); ?>
 						<h5>Categories</h5>
 						<ul class="filters only-recipe">
+							<?php
+							$categories = get_categories();
+							?>
 							<li>
 								<a class="option sfilter" href="#">Vegetarian</a>
+							</li>
+						</ul>
+
+						<h5>Dietary Preference</h5>
+						<ul class="filters only-recipe">
+							<?php foreach( $categories as $category ) {
+								$cat_parent_name = get_cat_name( $category->parent );
+								if ( strtolower($cat_parent_name) == 'diet' ) {
+									echo "<li><a class='option sfilter' data-category='{$category->name}' href='javascript:;'>" .
+												$category->name .
+												"</a></li>";
+								}
+							} ?>
+						</ul>
+
+						<h5>Difficulty</h5>
+						<ul class="filters only-recipe">
+							<?php foreach( $categories as $category ) {
+								$cat_parent_name = get_cat_name( $category->parent );
+								if ( strtolower($cat_parent_name) == 'difficulty' ) {
+									echo "<li><a class='option sfilter' data-category='{$category->name}' href='javascript:;'>" .
+												$category->name .
+												"</a></li>";
+								}
+							} ?>
+						</ul>
+
+						<h5>Cuisine</h5>
+						<ul class="only-recipe">
+							<li class="no-line clearfix">
+								<div class="select-style">
+									<select class="cuisine dfilter">
+										<option selected="selected" value="">All</option>
+										<?php
+										$cuisines = get_categories( array('taxonomy' => 'cuisine') );
+										foreach( $cuisines as $cuisine ) {
+											echo "<option value='{$cuisine->slug}'>{$cuisine->name}</option>";
+										} ?>
+									</select>
+								</div>
+							</li>
+						</ul>
+
+						<h5>Course</h5>
+						<ul class="only-recipe">
+							<li class="no-line clearfix">
+								<div class="select-style">
+									<select class="cuisine dfilter">
+										<option selected="selected" value="">All</option>
+										<?php
+										$courses = get_categories( array('taxonomy' => 'course') );
+										foreach( $courses as $course ) {
+											echo "<option value='{$course->slug}'>{$course->name}</option>";
+										} ?>
+									</select>
+								</div>
 							</li>
 						</ul>
 					</div>
