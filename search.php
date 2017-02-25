@@ -28,11 +28,15 @@ get_header(); ?>
 						<h5>Categories</h5>
 						<ul class="filters only-recipe">
 							<?php
-							$categories = get_categories();
+							$exclude_cats = array('difficulty', 'ingredients', 'diet', 'cooking-time', 'preparation-time');
+							foreach( $categories as $category ) {
+								if ( !$category->parent && !in_array($category->slug, $exclude_cats) ) {
+									echo "<li><a class='option sfilter' data-category='{$category->name}' href='javascript:;'>" .
+												$category->name .
+												"</a></li>";
+								}
+							}
 							?>
-							<li>
-								<a class="option sfilter" href="#">Vegetarian</a>
-							</li>
 						</ul>
 
 						<h5>Dietary Preference</h5>
