@@ -471,6 +471,16 @@
 				}
 			}
 		}
+
+		.blank-results {
+			padding-top: 1.1rem;
+			min-height: 300px;
+
+			span.clipart {
+				font-size: 4rem;
+				opacity: .2;
+			}
+		}
 	}
 
 	.endless_container {

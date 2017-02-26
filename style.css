@@ -960,6 +960,8 @@ blockquote {
   #ct-container .sectional .info a {
     position: relative;
     top: 4px; }
+#ct-container .center {
+  text-align: center; }
 
 .btn {
   -webkit-transition: all 0.2s;
@@ -3187,6 +3189,12 @@ body.admin-bar .ctmodal .overlay-content {
                     #ct-container .search-page .search-container .result-posts .card article .container .text-area p {
                       max-height: 90px;
                       font-size: 13px; } }
+    #ct-container .search-page .blank-results {
+      padding-top: 1.1rem;
+      min-height: 300px; }
+      #ct-container .search-page .blank-results span.clipart {
+        font-size: 4rem;
+        opacity: .2; }
   #ct-container .endless_container {
     text-align: center;
     margin-top: .5rem; }

@@ -12,6 +12,8 @@ get_header(); ?>
 	<div class="search-area clearfix">
 
 		<div class="search-filters">
+
+			<?php if ( have_posts() ) : ?>
 			<div class="filter-shell">
 				<section>
 					<div class="filter-header clearfix">
@@ -97,6 +99,7 @@ get_header(); ?>
 					</div>
 				</section>
 			</div>
+			<?php endif; ?>
 		</div>
 
 		<div class="search-results">
@@ -104,6 +107,7 @@ get_header(); ?>
 				<div class="search-container">
 					<div class="result-posts">
 
+						<?php if ( have_posts() ) : ?>
 						<div class="sectional">
 							<ul class="items">
 								<li class="active">
@@ -120,9 +124,6 @@ get_header(); ?>
 						<div class="cards-shell">
 							<div class="cards-container endless-list clearfix">
 
-		<?php
-		if ( have_posts() ) : ?>
-
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -137,15 +138,8 @@ get_header(); ?>
 			endwhile;
 			?>
 
-		<?php
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-							</div>
-						</div>
+							</div> <!-- .cards-container -->
+						</div> <!-- .cards-shell -->
 
 						<div class="endless_container">
 							<?php if( get_next_posts_link() ) {
@@ -154,8 +148,19 @@ get_header(); ?>
 								echo '</span>';
 							} ?>
 						</div>
-					</div>
-				</div>
+
+		<?php
+		else : ?>
+
+		<div class="blank-results center">
+			<span class="cticon-alert dim clipart"></span>
+			<p class="">Sorry, we couldn't find any matches.</p>
+		</div>
+
+		<?php endif; ?>
+
+					</div> <!-- .result-posts -->
+				</div> <!-- .search-container -->
 			</section>
 		</div> <!-- .search-results -->
 
