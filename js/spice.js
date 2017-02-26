@@ -22,6 +22,8 @@ var spice = {
 		$( '.share-on-mobile' ).on( 'click', spice.shareMobile );
 		$( '.endless_container .load-more a').on( 'click', spice.loadMoreSearch );
 		$( '.dfilter' ).on( 'change', spice.courseCuisineFilter );
+		$( '.toggle-filter' ).on( 'click', spice.toggleFilter );
+		$( '.filter-header .reset' ).on( 'click', spice.filterReset );
 	},
 
 	openComments: function() {
@@ -105,6 +107,16 @@ var spice = {
 			var newUrl = currentUrl + '&' + filter + '=' + value;
 			location.href = newUrl;
 		}
+	},
+
+	toggleFilter: function( e ) {
+		$( '.search-filters' ).toggleClass( 'on' );
+		e.preventDefault();
+	},
+
+	filterReset: function() {
+		var s = getUrlParameter( 's' );
+		window.location.search = 's=' + s;
 	}
 }
 

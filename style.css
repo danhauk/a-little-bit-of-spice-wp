@@ -1026,6 +1026,15 @@ blockquote {
   font-size: 11px;
   line-height: 1.2; }
 
+.btn-default {
+  color: #999;
+  background-color: #ffffff;
+  border-color: #bbb; }
+  .btn-default:hover {
+    color: #333;
+    background-color: #ffffff;
+    border-color: #666; }
+
 .img-holder {
   margin-top: 1.5rem;
   overflow: hidden; }
@@ -2912,6 +2921,47 @@ body.admin-bar .ctmodal .overlay-content {
           width: 20%;
           display: table-cell;
           vertical-align: top; } }
+      #ct-container .search-page .search-filters.on {
+        background: #ffffff;
+        display: block;
+        position: fixed;
+        text-align: left;
+        z-index: 200;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; }
+        #ct-container .search-page .search-filters.on .filter-header {
+          display: block; }
+        #ct-container .search-page .search-filters.on .filter-container {
+          position: absolute;
+          width: 100%;
+          height: auto;
+          overflow: auto;
+          top: 101px;
+          bottom: 0;
+          padding: 15px 15px;
+          display: block !important; }
+        #ct-container .search-page .search-filters.on h5 {
+          color: #444;
+          font-family: "Helvetica",sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          text-rendering: optimizeLegibility;
+          border-bottom: 2px solid #444; }
+        #ct-container .search-page .search-filters.on li {
+          width: 100%;
+          border-bottom: 1px solid #e9e9e9; }
+          #ct-container .search-page .search-filters.on li.no-line {
+            border: none; }
+          #ct-container .search-page .search-filters.on li a.option {
+            display: block;
+            padding: 10px 18px 10px 0;
+            font-size: .95rem; }
+            #ct-container .search-page .search-filters.on li a.option::before {
+              top: 12px; }
       #ct-container .search-page .search-filters h5 {
         font-size: 13px;
         font-family: "Helvetica",sans-serif;
@@ -2988,13 +3038,14 @@ body.admin-bar .ctmodal .overlay-content {
       position: fixed;
       background: #ffffff;
       z-index: 220;
-      top: 0;
+      top: 46px;
       left: 0;
       right: 0;
       width: 100%;
-      font-family: "Fira Sans","Helvetica",sans-serif;
+      font-family: "Helvetica",sans-serif;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
+      line-height: 28px;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -3009,7 +3060,8 @@ body.admin-bar .ctmodal .overlay-content {
         line-height: 30px;
         color: #444;
         text-align: center;
-        left: 0; }
+        left: 0;
+        border: 0; }
       #ct-container .search-page .filter-header .controls {
         display: inline-block;
         float: right;

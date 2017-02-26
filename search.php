@@ -12,8 +12,6 @@ get_header(); ?>
 	<div class="search-area clearfix">
 
 		<div class="search-filters">
-
-			<?php if ( have_posts() ) : ?>
 				<?php global $wp;
 							$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
 							$catlist = '';
@@ -31,8 +29,7 @@ get_header(); ?>
 						Filters
 
 						<div class="controls">
-							<a class="btn btn-default reset" style="display: none;">Reset</a>
-							<a class="btn btn-success apply-filter hide" style="display: none;">Apply</a>
+							<a class="btn btn-default reset" <?php echo ( isset($_GET['category_name']) || isset($_GET['catlist']) || isset($_GET['cuisine']) || isset($_GET['course']) ? '' : 'style="display: none;"' ); ?>>Reset</a>
 						</div>
 					</div>
 					<div class="filter-container">
@@ -181,7 +178,6 @@ get_header(); ?>
 					</div>
 				</section>
 			</div>
-			<?php endif; ?>
 		</div>
 
 		<div class="search-results">

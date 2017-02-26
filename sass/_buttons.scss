@@ -61,3 +61,15 @@
   font-size: 11px;
   line-height: 1.2;
 }
+
+.btn-default {
+	color: #999;
+  background-color: #ffffff;
+  border-color: #bbb;
+
+	&:hover {
+		color: #333;
+		background-color: #ffffff;
+		border-color: #666;
+	}
+}
