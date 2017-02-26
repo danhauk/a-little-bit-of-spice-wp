@@ -31,11 +31,20 @@ get_header(); ?>
 						<ul class="filters only-recipe">
 							<?php
 							$exclude_cats = array('difficulty', 'ingredients', 'diet', 'cooking-time', 'preparation-time');
+							$search_url = get_bloginfo('url') . '/?s=' . $_GET['s'];
 							foreach( $categories as $category ) {
 								if ( !$category->parent && !in_array($category->slug, $exclude_cats) ) {
-									echo "<li><a class='option sfilter' data-category='{$category->name}' href='javascript:;'>" .
-												$category->name .
-												"</a></li>";
+									if ( isset($_GET['category_name']) && $_GET['category_name'] == $category->name ) {
+										echo '<li class="selected">' .
+													"<a class='option sfilter' href='{$search_url}'>" .
+													$category->name .
+													"</a></li>";
+									} else {
+										echo '<li>' .
+													"<a class='option sfilter' href='{$search_url}&category_name={$category->name}'>" .
+													$category->name .
+													"</a></li>";
+									}
 								}
 							}
 							?>

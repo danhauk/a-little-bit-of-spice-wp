@@ -2974,6 +2974,12 @@ body.admin-bar .ctmodal .overlay-content {
             max-width: 180px; } }
         #ct-container .search-page .search-filters li .select-style option {
           text-transform: capitalize; }
+        #ct-container .search-page .search-filters li.selected a {
+          color: rgba(0, 0, 0, 0.9);
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale; }
+          #ct-container .search-page .search-filters li.selected a::before {
+            opacity: 1; }
     #ct-container .search-page .filter-header {
       display: none;
       height: 54px;
