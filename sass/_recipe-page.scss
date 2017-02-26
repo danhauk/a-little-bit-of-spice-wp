@@ -73,6 +73,9 @@ body.single-recipe {
 			}
 			.item-value {
 				display: inline-block;
+				&.capitalize {
+					text-transform: capitalize;
+				}
 			}
 		}
 	}

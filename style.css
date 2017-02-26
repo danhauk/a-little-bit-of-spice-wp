@@ -1618,6 +1618,8 @@ body.single-recipe .images {
         margin: 0 4px; }
     .ct-recipe .recipe-meta-inline ul li .item-value {
       display: inline-block; }
+      .ct-recipe .recipe-meta-inline ul li .item-value.capitalize {
+        text-transform: capitalize; }
 
 .ct-recipe-apps {
   text-align: center;

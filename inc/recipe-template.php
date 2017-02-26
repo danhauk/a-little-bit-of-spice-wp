@@ -46,7 +46,7 @@ function wpurp_custom_template_test( $content, $recipe )
 				<?php if ( isset( $recipe_terms['course'] ) ) { ?>
 				<li>
 					<span class="item-key">Course</span>
-					<span class="item-value" itemprop="recipeCategory" content="<?php echo $recipe_terms['course']; ?>">
+					<span class="item-value capitalize" itemprop="recipeCategory" content="<?php echo $recipe_terms['course']; ?>">
 						<?php echo $recipe_terms['course']; ?>
 					</span>
 				</li>
@@ -55,7 +55,7 @@ function wpurp_custom_template_test( $content, $recipe )
 				<?php if ( isset ( $recipe_terms['cuisine'] ) ) { ?>
 				<li>
 					<span class="item-key">Cuisine</span>
-					<span class="item-value" itemprop="recipeCuisine" content="<?php echo $recipe_terms['cuisine']; ?>">
+					<span class="item-value capitalize" itemprop="recipeCuisine" content="<?php echo $recipe_terms['cuisine']; ?>">
 						<?php echo $recipe_terms['cuisine']; ?>
 					</span>
 				</li>
@@ -65,7 +65,7 @@ function wpurp_custom_template_test( $content, $recipe )
 				<li>
 					<span class="item-key">Yield</span>
 					<span itemprop="recipeYield">
-						<?php echo $recipe->servings(); ?> s
+						<?php echo $recipe->servings() . ' ' . $recipe->servings_type(); ?>
 					</span>
 				</li>
 				<?php } ?>
