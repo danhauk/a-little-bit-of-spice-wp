@@ -22,8 +22,11 @@
 		<ul class="ct-post-categories">
 			<?php
 			$post_categories = get_the_category();
+			$exclude_cats = array('difficulty', 'ingredients', 'diet', 'cooking-time', 'preparation-time');
 			foreach( $post_categories as $category ) {
-				echo "<li><a href='/category/{$category->slug}'>{$category->name}</a></li>";
+				if ( !$category->parent && !in_array($category->slug, $exclude_cats) ) {
+					echo "<li><a href='/category/{$category->slug}'>{$category->name}</a></li>";
+				}
 			} ?>
 		</ul>
 	</article>
