@@ -14,6 +14,16 @@ get_header(); ?>
 		<div class="search-filters">
 
 			<?php if ( have_posts() ) : ?>
+				<?php global $wp;
+							$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+							$catlist = '';
+							$catlist_arr = array();
+
+							if ( isset($_GET['catlist']) ) {
+								$catlist = $_GET['catlist'];
+								$catlist_arr = explode( ',', $catlist );
+							}
+				?>
 			<div class="filter-shell">
 				<section>
 					<div class="filter-header clearfix">
@@ -32,6 +42,7 @@ get_header(); ?>
 							<?php
 							$exclude_cats = array('difficulty', 'ingredients', 'diet', 'cooking-time', 'preparation-time');
 							$search_url = get_bloginfo('url') . '/?s=' . $_GET['s'];
+							$search_url .= ( $catlist != '' ? '&catlist='.$catlist : '' );
 							foreach( $categories as $category ) {
 								if ( !$category->parent && !in_array($category->slug, $exclude_cats) ) {
 									if ( isset($_GET['category_name']) && $_GET['category_name'] == $category->name ) {
@@ -55,9 +66,36 @@ get_header(); ?>
 							<?php foreach( $categories as $category ) {
 								$cat_parent_name = get_cat_name( $category->parent );
 								if ( strtolower($cat_parent_name) == 'diet' ) {
-									echo "<li><a class='option sfilter' data-category='{$category->name}' href='javascript:;'>" .
-												$category->name .
-												"</a></li>";
+									$cat_id = $category->term_id;
+
+									if ( in_array( $cat_id, $catlist_arr ) ) {
+										// if category is in current filters
+										// remove this category id from the list to deselect the option
+										$cat_index = array_search($cat_id, $catlist_arr);
+										$new_catlist_arr = $catlist_arr;
+										unset( $new_catlist_arr[$cat_index] );
+
+										// if the array has remaining categories,
+										// create a new catlist, otherwise empty catlist parameter
+										if ( count($new_catlist_arr) ) {
+											$new_catlist = implode(',', $new_catlist_arr);
+										} else {
+											$new_catlist = '';
+										}
+
+										echo "<li class='selected'>" .
+													"<a class='option sfilter' href='{$current_url}&catlist={$new_catlist}'>" .
+													$category->name .
+													"</a></li>";
+									}
+									else {
+										// category is not in current filters
+										// add the category id to the catlist parameter
+										$new_catlist = ( $catlist ? $catlist.','.$cat_id : $cat_id );
+										echo "<li><a class='option sfilter' href='{$current_url}&catlist={$new_catlist}'>" .
+													$category->name .
+													"</a></li>";
+									}
 								}
 							} ?>
 						</ul>
@@ -67,9 +105,36 @@ get_header(); ?>
 							<?php foreach( $categories as $category ) {
 								$cat_parent_name = get_cat_name( $category->parent );
 								if ( strtolower($cat_parent_name) == 'difficulty' ) {
-									echo "<li><a class='option sfilter' data-category='{$category->name}' href='javascript:;'>" .
-												$category->name .
-												"</a></li>";
+									$cat_id = $category->term_id;
+
+									if ( in_array( $cat_id, $catlist_arr ) ) {
+										// if category is in current filters
+										// remove this category id from the list to deselect the option
+										$cat_index = array_search($cat_id, $catlist_arr);
+										$new_catlist_arr = $catlist_arr;
+										unset( $new_catlist_arr[$cat_index] );
+
+										// if the array has remaining categories,
+										// create a new catlist, otherwise empty catlist parameter
+										if ( count($new_catlist_arr) ) {
+											$new_catlist = implode(',', $new_catlist_arr);
+										} else {
+											$new_catlist = '';
+										}
+
+										echo "<li class='selected'>" .
+													"<a class='option sfilter' href='{$current_url}&catlist={$new_catlist}'>" .
+													$category->name .
+													"</a></li>";
+									}
+									else {
+										// category is not in current filters
+										// add the category id to the catlist parameter
+										$new_catlist = ( $catlist ? $catlist.','.$cat_id : $cat_id );
+										echo "<li><a class='option sfilter' href='{$current_url}&catlist={$new_catlist}'>" .
+													$category->name .
+													"</a></li>";
+									}
 								}
 							} ?>
 						</ul>
