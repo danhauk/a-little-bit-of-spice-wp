@@ -198,25 +198,37 @@ add_action('pre_get_posts', 'a_little_bit_of_spice_search_query', 1000);
 function a_little_bit_of_spice_search_query($query)
 {
   if ( $query->is_search() ) {
-		// echo gettype($_GET['catlist']);
-		// tag search
+		// category search
 		if ( isset($_GET['catlist']) && $_GET['catlist'] != '' ) {
 			$catlist_arr = explode( ',', $_GET['catlist'] );
 			$query->set( 'category__and', $catlist_arr );
 		}
 
-		return $query;
+		// cuisine and course
+		if ( isset($_GET['cuisine']) || isset($_GET['course']) ) {
+			$taxquery = array( 'relation' => 'AND' );
 
-    // $cat_and = array();
-		//
-    // foreach (array('countries', 'stays') as $variable) {
-    //   $categories = get_query_var($variable);
-		//
-    //   if (!empty($categories)) {
-    //     $cat_and = array_merge($cat_and, $categories);
-    //   }
-    // }
-		//
-    // if (!empty($cat_and)) $query->set('category__and', $cat_and);
+			if ( isset($_GET['cuisine']) && $_GET['cuisine'] != '' ) {
+				$cuisine_tax = array(
+					'taxonomy' => 'cuisine',
+					'field' => 'slug',
+					'terms' => $_GET['cuisine']
+				);
+				array_push( $taxquery, $cuisine_tax );
+			}
+
+			if ( isset($_GET['course']) && $_GET['course'] != '' ) {
+				$course_tax = array(
+					'taxonomy' => 'course',
+					'field' => 'slug',
+					'terms' => $_GET['course']
+				);
+				array_push( $taxquery, $course_tax );
+			}
+
+			$query->set( 'tax_query', $taxquery );
+		}
+
+		return $query;
   }
 }

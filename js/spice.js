@@ -21,6 +21,7 @@ var spice = {
 		$( '.share-icons' ).on( 'mouseleave', spice.shareMoreHide );
 		$( '.share-on-mobile' ).on( 'click', spice.shareMobile );
 		$( '.endless_container .load-more a').on( 'click', spice.loadMoreSearch );
+		$( '.dfilter' ).on( 'change', spice.courseCuisineFilter );
 	},
 
 	openComments: function() {
@@ -68,6 +69,42 @@ var spice = {
 				searchPageCount++;
 			}
 	  });
+	},
+
+	courseCuisineFilter: function() {
+		var filter = $(this).data( 'filter' ),
+				value = $(this).val();
+
+		var currentUrl = $(location).attr('href'),
+				filterParam = getUrlParameter( filter );
+
+		if ( filterParam != undefined ) {
+			// parameter currently exists
+			// replace it
+    	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+      		sURLVariables = sPageURL.split('&'),
+      		sParameterName,
+      		i,
+					newUrlParams;
+
+			for (i = 0; i < sURLVariables.length; i++) {
+				sParameterName = sURLVariables[i].split('=');
+
+				// if the parameter name equals what we're looking for (filter)
+				// replace the value
+				if ( sParameterName[0] === filter) {
+					sURLVariables[i] = filter + '=' + value;
+				}
+			}
+
+			newUrlParams = sURLVariables.join( '&' );
+			window.location.search = newUrlParams;
+		} else {
+			// parameter does not exist
+			// add it to the current url
+			var newUrl = currentUrl + '&' + filter + '=' + value;
+			location.href = newUrl;
+		}
 	}
 }
 

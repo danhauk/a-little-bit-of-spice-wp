@@ -143,12 +143,16 @@ get_header(); ?>
 						<ul class="only-recipe">
 							<li class="no-line clearfix">
 								<div class="select-style">
-									<select class="cuisine dfilter">
-										<option selected="selected" value="">All</option>
+									<select class="cuisine dfilter" data-filter="cuisine">
+										<option <?php echo ( isset($_GET['cuisine']) ? '' : 'selected="selected"' ); ?> value="">All</option>
 										<?php
 										$cuisines = get_categories( array('taxonomy' => 'cuisine') );
 										foreach( $cuisines as $cuisine ) {
-											echo "<option value='{$cuisine->slug}'>{$cuisine->name}</option>";
+											if ( isset($_GET['cuisine']) && $_GET['cuisine'] == $cuisine->slug ) {
+												echo "<option value='{$cuisine->slug}' selected='selected'>{$cuisine->name}</option>";
+											} else {
+												echo "<option value='{$cuisine->slug}'>{$cuisine->name}</option>";
+											}
 										} ?>
 									</select>
 								</div>
@@ -159,12 +163,16 @@ get_header(); ?>
 						<ul class="only-recipe">
 							<li class="no-line clearfix">
 								<div class="select-style">
-									<select class="cuisine dfilter">
-										<option selected="selected" value="">All</option>
+									<select class="course dfilter" data-filter="course">
+										<option <?php echo ( isset($_GET['course']) ? '' : 'selected="selected"' ); ?> value="">All</option>
 										<?php
 										$courses = get_categories( array('taxonomy' => 'course') );
 										foreach( $courses as $course ) {
-											echo "<option value='{$course->slug}'>{$course->name}</option>";
+											if ( isset($_GET['course']) && $_GET['course'] == $course->slug ) {
+												echo "<option value='{$course->slug}' selected='selected'>{$course->name}</option>";
+											} else {
+												echo "<option value='{$course->slug}'>{$course->name}</option>";
+											}
 										} ?>
 									</select>
 								</div>
