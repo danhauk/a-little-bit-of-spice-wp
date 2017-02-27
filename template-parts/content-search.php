@@ -7,9 +7,7 @@
  * @package A_Little_Bit_of_Spice
  */
 
-?>
-
-<div class="card">
+?><div class="card">
 	<article>
 		<div class="container">
 			<div class="img-shell">

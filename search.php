@@ -200,7 +200,7 @@ get_header(); ?>
 						</div>
 
 						<div class="cards-shell">
-							<div class="cards-container endless-list clearfix">
+							<div class="cards-container endless-list clearfix" data-columns>
 
 			<?php
 			/* Start the Loop */

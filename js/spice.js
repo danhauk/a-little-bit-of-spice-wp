@@ -6,10 +6,10 @@ var spice = {
 	init: function() {
 		var handler;
 
-		// $( '.search-container .cards-container' ).masonry( {
-		// 	columnWidth: '.card',
-		// 	itemSelector: '.card'
-		// });
+		$( '.search-container .cards-container' ).masonry( {
+			columnWidth: '.card',
+			itemSelector: '.card'
+		});
 		spice.infiniteSearch();
 		spice.bindEvents();
 	},

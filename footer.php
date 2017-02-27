@@ -107,7 +107,37 @@ function loadArticle(pageNumber) {
 					} else {
 						jQuery('.endless_container .auto-load a').text( 'Show More Posts' );
 					}
-					jQuery(".search-container .cards-container").append(html);
+
+					// split html into an array of divs
+					var htmlArray = html.split( '<div class="card">' );
+					htmlArray.shift();
+
+					var appendHtml = htmlArray.map( function(div) {
+						var newDiv = '<div class="card">';
+						return newDiv += div;
+					});
+
+					jQuery.each( appendHtml, function( i, val ) {
+						var newval = jQuery(val);
+						// newval.pop();
+						console.log( newval );
+						jQuery(".search-container .cards-container")
+							.append( newval )
+							.masonry('appended', newval)
+							.masonry();
+					});
+					//
+					// var content = [];
+					//
+					// for ( var i = 0; i < appendHtml.length; i++ ) {
+					// 	var obj = jQuery( appendHtml[i] );
+					// 	content.push( obj );
+					// }
+					//
+					// // var content = jQuery('<div class="card"><h1>Hello!</h1></div>');
+					//
+					// console.log(content);
+					// jQuery(".search-container .cards-container").append( content ).masonry('appended', content);
 	      }
 	  });
 		return false;

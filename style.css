@@ -3113,7 +3113,8 @@ body.admin-bar .ctmodal .overlay-content {
           display: flex;
           flex-wrap: wrap;
           margin: 0.5em -0.5em 80px;
-          width: auto; }
+          width: auto;
+          padding-bottom: 20vh; }
         #ct-container .search-page .search-container .result-posts .card {
           display: flex;
           padding: .25em;
