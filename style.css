@@ -2416,6 +2416,8 @@ body.admin-bar .ctmodal .overlay-content {
         @media (min-width: 1024px) {
           .ct-index-parameters ul li a {
             font-size: 18px; } }
+        .ct-index-parameters ul li a .ItemName {
+          text-transform: capitalize; }
         .ct-index-parameters ul li a .ItemCount {
           margin-left: 3px;
           color: #999; }
@@ -2502,7 +2504,12 @@ body.admin-bar .ctmodal .overlay-content {
         display: block;
         position: absolute;
         top: 0;
-        left: 0; }
+        left: 0;
+        height: 100%;
+        width: 100%; }
+        .recipe-index ul.card-wrapper li .img-holder .thumb img {
+          height: 100%;
+          width: 100%; }
       .recipe-index ul.card-wrapper li .img-holder:after {
         -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
@@ -2552,9 +2559,11 @@ body.admin-bar .ctmodal .overlay-content {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       font-weight: 600;
-      padding: 4% 10%;
       letter-spacing: 0;
       opacity: .8; }
+      .recipe-index ul.card-wrapper li .post-snippet h2 a {
+        padding: 4% 10%;
+        display: block; }
       .recipe-index ul.card-wrapper li .post-snippet h2 a, .recipe-index ul.card-wrapper li .post-snippet h2 a:hover {
         color: #fff; }
       @media (min-width: 1024px) {

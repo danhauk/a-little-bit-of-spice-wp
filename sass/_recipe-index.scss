@@ -129,6 +129,9 @@
 				@media($lg) {
 					font-size: 18px;
 				}
+				.ItemName {
+					text-transform: capitalize;
+				}
 				.ItemCount {
 					margin-left: 3px;
 					color: #999;
@@ -216,6 +219,10 @@
 					display: block;
 					position: absolute;
 					top:0; left: 0;
+					height: 100%; width: 100%;
+					img {
+						height: 100%; width: 100%;
+					}
 				}
 				&:after{
 					@include transition(all .2s);
@@ -243,9 +250,12 @@
 				right: 0;
 				@include crisp();
 				font-weight: 600;
-				padding: 4% 10%;
 				letter-spacing: 0;
 				opacity: .8;
+				a {
+					padding: 4% 10%;
+					display: block;
+				}
 				a, a:hover{color:$white;}
 				@media($lg){font-size: 15px;}
 			}
