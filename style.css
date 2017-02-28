@@ -2404,15 +2404,25 @@ body.admin-bar .ctmodal .overlay-content {
         padding: 12px 0px 12px 10px; } }
     .ct-index-parameters ul li {
       padding: 3px 0;
-      line-height: 1.1; }
+      line-height: 1.1;
+      display: inline-block;
+      width: 50%;
+      vertical-align: text-top; }
+      @media (min-width: 768px) {
+        .ct-index-parameters ul li {
+          width: 32%; } }
       .ct-index-parameters ul li a {
         font-size: 16px; }
-      @media (min-width: 1024px) {
-        .ct-index-parameters ul li {
-          width: 33.3%;
-          padding: 3px 0; }
+        @media (min-width: 1024px) {
           .ct-index-parameters ul li a {
             font-size: 18px; } }
+        .ct-index-parameters ul li a .ItemCount {
+          margin-left: 3px;
+          color: #999; }
+          .ct-index-parameters ul li a .ItemCount::before {
+            content: '('; }
+          .ct-index-parameters ul li a .ItemCount::after {
+            content: ')'; }
   .ct-index-parameters .ct-index-grp {
     text-align: left;
     display: table;
@@ -2424,7 +2434,7 @@ body.admin-bar .ctmodal .overlay-content {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 15px 0; }
     .ct-index-parameters .ct-index-grp:nth-child(odd) {
-      background: rgba(51, 51, 51, 0.3); }
+      background: rgba(51, 51, 51, 0.03); }
     .ct-index-parameters .ct-index-grp:first-child {
       border-top: 2px solid rgba(0, 0, 0, 0.1); }
     .ct-index-parameters .ct-index-grp:last-child {
@@ -3320,6 +3330,16 @@ body.admin-bar #ct-container .header {
       padding-top: 55px;
       width: 100%;
       text-align: left; } }
+  .generic .page-header label {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-transform: uppercase;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .02rem;
+    line-height: 1;
+    margin-top: -19px;
+    color: rgba(0, 0, 0, 0.3); }
   .generic .page-header h1 {
     color: rgba(0, 0, 0, 0.3);
     line-height: 1.1; }

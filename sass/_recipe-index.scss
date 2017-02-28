@@ -117,12 +117,33 @@
 		li{
 			padding: 3px 0;
 			line-height: 1.1;
-			a{font-size: 16px;}
-			@media($lg){width: 33.3%; padding: 3px 0; a{font-size: 18px;}}
+			display: inline-block;
+	    width: 50%;
+	    vertical-align: text-top;
+			@media($md) {
+				width: 32%;
+			}
+
+			a {
+				font-size: 16px;
+				@media($lg) {
+					font-size: 18px;
+				}
+				.ItemCount {
+					margin-left: 3px;
+					color: #999;
+					&::before {
+						content: '(';
+					}
+					&::after {
+						content: ')';
+					}
+				}
+			}
 		}
 	}
 	.ct-index-grp{
-		&:nth-child(odd){background: rgba($text-color,.3);}
+		&:nth-child(odd){background: rgba(51,51,51,0.03);}
 		text-align: left;
 		display: table;
 		width: 100%;
@@ -151,7 +172,6 @@
 			color: $text-color;
 			letter-spacing: .04rem;
 		}
-
 	}
 }
 .recipe-index{

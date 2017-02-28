@@ -10,6 +10,18 @@
 			text-align: left;
 		}
 
+		label {
+	    font-family: $font-heading;
+	    text-transform: uppercase;
+	    display: block;
+	    font-size: 14px;
+	    font-weight: 400;
+	    letter-spacing: .02rem;
+	    line-height: 1;
+	    margin-top: -19px;
+	    color: rgba(0,0,0,0.3);
+		}
+
 		h1 {
 			color: rgba(0,0,0,0.3);
 			line-height: 1.1;
