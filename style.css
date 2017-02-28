@@ -3311,3 +3311,79 @@ body.admin-bar #ct-container .header {
   @media all and (min-width: 783px) {
     body.admin-bar #ct-container .header {
       top: 32px; } }
+
+.generic .page-header {
+  padding-top: 20px;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .generic .page-header {
+      padding-top: 55px;
+      width: 100%;
+      text-align: left; } }
+  .generic .page-header h1 {
+    color: rgba(0, 0, 0, 0.3);
+    line-height: 1.1; }
+
+.dishes li {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .dishes li {
+      margin-bottom: 40px; } }
+  .dishes li h2 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .dishes li h2 {
+        float: left;
+        text-align: left;
+        width: 22%;
+        margin-right: 3%;
+        padding-top: 15px;
+        border-top: 1px solid #666;
+        font-size: 18px;
+        line-height: 1.2; } }
+  .dishes li .snippet-wrapper {
+    width: 75%;
+    float: right; }
+  .dishes li .img-holder {
+    position: relative;
+    margin-top: 0;
+    float: left;
+    padding-right: 10px;
+    line-height: 0;
+    width: 50%; }
+    @media (min-width: 768px) {
+      .dishes li .img-holder {
+        width: 25%;
+        padding-right: 20px; } }
+    @media (min-width: 1024px) {
+      .dishes li .img-holder {
+        width: 35%;
+        padding-right: 20px; } }
+    .dishes li .img-holder .img-link {
+      display: block;
+      position: relative;
+      padding-top: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      font-size: 0;
+      overflow: hidden; }
+      .dishes li .img-holder .img-link img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+  .dishes li .text-holder p {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.5; }
+    @media (min-width: 768px) {
+      .dishes li .text-holder p {
+        font-size: 16px;
+        line-height: 1.6; } }

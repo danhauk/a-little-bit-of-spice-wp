@@ -1,0 +1,97 @@
+// archive, category, etc pages
+.generic {
+	.page-header {
+		padding-top: 20px;
+    margin-bottom: 20px;
+
+		@media($md) {
+			padding-top: 55px;
+			width: 100%;
+			text-align: left;
+		}
+
+		h1 {
+			color: rgba(0,0,0,0.3);
+			line-height: 1.1;
+		}
+	}
+}
+
+.dishes {
+	li {
+		clear: both;
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+		@media($md) {
+			margin-bottom: 40px;
+		}
+
+		h2 {
+			font-size: 20px;
+	    margin: 0;
+	    padding: 0;
+	    font-weight: 600;
+	    margin-bottom: 15px;
+	    text-align: center;
+			@media($md) {
+				float: left;
+				text-align: left;
+				width: 22%;
+				margin-right: 3%;
+				padding-top: 15px;
+				border-top: 1px solid #666;
+				font-size: 18px;
+				line-height: 1.2;
+			}
+		}
+
+		.snippet-wrapper {
+			width: 75%;
+    	float: right;
+		}
+
+		.img-holder {
+			position: relative;
+	    margin-top: 0;
+	    float: left;
+	    padding-right: 10px;
+	    line-height: 0;
+	    width: 50%;
+			@media($md) {
+				width: 25%;
+				padding-right: 20px;
+			}
+			@media($lg) {
+				width: 35%;
+    		padding-right: 20px;
+			}
+
+			.img-link {
+				display: block;
+		    position: relative;
+		    padding-top: 100%;
+		    background: rgba(0,0,0,0.1);
+		    font-size: 0;
+		    overflow: hidden;
+
+				img {
+					width: 100%;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+				}
+			}
+		}
+
+		.text-holder p {
+			margin-top: 0;
+	    font-size: 16px;
+	    line-height: 1.5;
+			@media($md) {
+				font-size: 16px;
+    		line-height: 1.6;
+			}
+		}
+	}
+}

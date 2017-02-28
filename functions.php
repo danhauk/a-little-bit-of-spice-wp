@@ -232,3 +232,23 @@ function a_little_bit_of_spice_search_query($query)
 		return $query;
   }
 }
+
+/*
+ * Remove "Category: " from page title
+ */
+function a_little_bit_of_spice_archive_title( $title ) {
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    }
+
+    return $title;
+}
+add_filter( 'get_the_archive_title', 'a_little_bit_of_spice_archive_title' );
