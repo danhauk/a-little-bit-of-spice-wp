@@ -121,7 +121,7 @@ function wpurp_custom_template_test( $content, $recipe )
 
 				<div class="ing-line" itemprop="ingredients">
 		   		<div class="ing-name">
-		   			<?php echo $ingredient['ingredient']; ?>
+						<?php echo $ingredient['ingredient'] . ' ' . $ingredient['notes']; ?>
 		   		</div>
 		   		<div class="ing-qty">
 		   			<?php echo $ingredient['amount']; ?>
