@@ -117,17 +117,22 @@ if ( post_password_required() ) {
 					<div class="comments-list clearfix">
 						<ul>
 							<?php
-							$post_comments = get_comments( array( 'post_id' => get_the_ID() ) );
-							foreach( $post_comments as $comment ): ?>
+							$post_comments = get_comments( array( 'post_id' => get_the_ID(), 'order' => 'ASC' ) );
+							foreach( $post_comments as $comment ):
+
+								// get a random number for default profile images
+								$x = random_int( 1, 20 );
+								$default_avatar = get_template_directory_uri() . "/img/profile-defaults/{$x}_50.png";
+								?>
 							<li class="comment-block comment-item" id="comment-<?php echo $comment->comment_ID; ?>">
 
 								<?php if ( $comment->comment_author_url ): ?>
 									<a class="ct-usr" href="<?php echo $comment->comment_author_url; ?>">
-										<?php echo get_avatar( $comment->comment_author_email, 50, '', $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
+										<?php echo get_avatar( $comment->comment_author_email, 50, $default_avatar, $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
 									</a>
 								<?php else: ?>
 									<span class="ct-usr">
-										<?php echo get_avatar( $comment->comment_author_email, 50, '', $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
+										<?php echo get_avatar( $comment->comment_author_email, 50, $default_avatar, $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
 									</span>
 								<?php endif; ?>
 
@@ -149,13 +154,7 @@ if ( post_password_required() ) {
 										<span class="stamp">
 											<?php
 											$timestamp = strtotime( $comment->comment_date );
-											if ( $timestamp > date( 'U' ) - 60*60*24*365 ) {
-												// if current date is over a year, show time ago
-												$timeago = human_time_diff( $timestamp, current_time('timestamp') ) . ' ago';
-											} else {
-												// otherwise, show full date
-												$timeago = date( 'F jS, Y', $timestamp );
-											}
+											$timeago = human_time_diff( $timestamp, current_time('timestamp') ) . ' ago';
 											?>
 											<time itemprop="datePublished" content="<?php echo $comment->comment_date; ?>" class="timeago" datetime="<?php echo $comment->comment_date; ?>" title="<?php echo date( 'F jS Y, H:i:s', $timestamp ); ?>">
 												<?php echo $timeago; ?>
