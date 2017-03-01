@@ -161,6 +161,10 @@ body.single-recipe {
 }
 
 // recipe steps
+.ct-recipe .steps-inline {
+	padding-bottom: 1px;
+}
+
 .ct-recipe ol {
 	li {
 		list-style-position: outside;

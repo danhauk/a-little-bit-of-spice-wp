@@ -166,7 +166,7 @@ function wpurp_custom_template_test( $content, $recipe )
 		<?php if ( $recipe->notes() ):
 			$notes = wpautop( $recipe->notes() ); ?>
 
-			<h2 id="notes">Notes</h2>
+			<p><strong>Notes</strong></p>
 			<?php echo $notes; ?>
 
 		<?php endif; ?>
