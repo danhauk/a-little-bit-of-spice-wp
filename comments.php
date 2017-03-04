@@ -128,11 +128,23 @@ if ( post_password_required() ) {
 
 								<?php if ( $comment->comment_author_url ): ?>
 									<a class="ct-usr" href="<?php echo $comment->comment_author_url; ?>">
-										<?php echo get_avatar( $comment->comment_author_email, 50, $default_avatar, $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
+										<?php
+										if ( $comment->comment_author_email ) {
+											echo get_avatar( $comment->comment_author_email, 50, $default_avatar, $comment->comment_author, array( 'class' => 'tiny-profile' ) );
+										} else {
+											echo '<img src="'.$default_avatar.'" class="tiny-profile" alt="'.$comment->comment_author.'"/>';
+										}
+										?>
 									</a>
 								<?php else: ?>
 									<span class="ct-usr">
-										<?php echo get_avatar( $comment->comment_author_email, 50, $default_avatar, $comment->comment_author, array( 'class' => 'tiny-profile' ) ); ?>
+										<?php
+										if ( $comment->comment_author_email ) {
+											echo get_avatar( $comment->comment_author_email, 50, $default_avatar, $comment->comment_author, array( 'class' => 'tiny-profile' ) );
+										} else {
+											echo '<img src="'.$default_avatar.'" class="tiny-profile" alt="'.$comment->comment_author.'"/>';
+										}
+										?>
 									</span>
 								<?php endif; ?>
 
