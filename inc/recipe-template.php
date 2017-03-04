@@ -87,7 +87,30 @@ function wpurp_custom_template_test( $content, $recipe )
 				<?php } ?>
 
 				<?php
-				$total_time = $recipe->prep_time() + $recipe->cook_time();
+				if ( $recipe->prep_time_text() == 'minutes' && $recipe->cook_time_text() == 'minutes' ) {
+					$total_time = $recipe->prep_time() + $recipe->cook_time() . ' minutes';
+				}
+				else {
+					if ( $recipe->prep_time_text() == 'hours' || $recipe->prep_time_text() == 'hour' ) {
+						$prep_time = $recipe->prep_time() * 60;
+					} else {
+						$prep_time = $recipe->prep_time();
+					}
+
+					if ( $recipe->cook_time_text() == 'hours' || $recipe->cook_time_text() == 'hour' ) {
+						$cook_time = $recipe->cook_time() * 60;
+					} else {
+						$cook_time = $recipe->cook_time();
+					}
+
+					$time = $prep_time + $cook_time;
+					$hours = $time / 60;
+					$total_hours = number_format( $hours, 0 );
+					$minutes = $time - ($total_hours * 60);
+
+					$total_time = ($total_hours > 1 ? $total_hours . ' hours ' : $total_hours . ' hour ');
+					$total_time .= $minutes . ' minutes';
+				}
 				?>
 				<li>
 					<span class="item-key">Total Time</span>
