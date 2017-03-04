@@ -2279,7 +2279,8 @@ body.admin-bar .ctmodal .overlay-content {
         top: 0;
         display: block; }
         .similar-card .similar-post-wrapper .img-holder a.thumb img {
-          width: 100%; }
+          width: 100%;
+          height: auto; }
     .similar-card .similar-post-wrapper h3 {
       font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
       font-weight: 400;
