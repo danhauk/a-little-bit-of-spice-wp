@@ -2217,6 +2217,7 @@ body.admin-bar .ctmodal .overlay-content {
     opacity: 1; } }
 
 .similar-posts {
+  clear: both;
   width: auto; }
   .similar-posts h3 {
     color: #000;
