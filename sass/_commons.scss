@@ -353,3 +353,75 @@
 			display: inline-block;
 		}
 	}
+
+// subscribe widget
+.wysija-input {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: block;
+	height: 50px;
+	color: #bbb;
+	font-size: 16px;
+	width: 100%;
+	border: 1px solid #ccc;
+	background: rgba(153,153,153,0.04);
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+	font-family: sans-serif;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-ms-transition: all .2s;
+	-o-transition: all .2s;
+	outline: none;
+	border-radius: 2px;
+	background-clip: padding-box;
+	padding: 10px;
+
+	&:hover,
+	&:focus {
+		background: #fff;
+		border: 1px solid #999;
+	}
+
+	&:focus {
+		color: $text-color;
+	}
+}
+
+.wysija-submit {
+	background: url(img/subscribe-btn.png) no-repeat left top;
+	background-size: 163px auto;
+	height: 85px;
+	width: 163px;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 0;
+	box-shadow: none;
+	text-indent: -9999em;
+
+	&:hover {
+		background-position: left bottom;
+	}
+}
+
+.wysija-paragraph {
+	padding: 0 15px;
+
+	.formError {
+		position: static !important;
+
+		.formErrorContent {
+			width: 100% !important;
+		}
+	}
+}
+
+.widget_wysija_cont {
+	clear: both;
+
+	.updated {
+		background-color: $selection;
+		border: 0;
+		font-size: 0.9rem;
+		padding: 15px;
+	}
+}

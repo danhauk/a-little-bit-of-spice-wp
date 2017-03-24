@@ -1035,18 +1035,17 @@ blockquote {
     background-color: #ffffff;
     border-color: #666; }
 
+img {
+  max-width: 100%; }
+
 .img-holder {
   margin-top: 1.5rem;
   overflow: hidden; }
-  .img-holder img {
-    width: 100%; }
 
 .img-center, .img-full-width {
   overflow: hidden;
   margin: 30px 0;
   text-align: center; }
-  .img-center img, .img-full-width img {
-    max-width: 100%; }
 
 .img-left {
   width: 50%;
@@ -1054,9 +1053,6 @@ blockquote {
   text-align: center;
   float: left;
   margin-right: 20px; }
-  .img-left img {
-    max-width: 100%;
-    max-width: 100%; }
 
 .center {
   text-align: center; }
@@ -1065,8 +1061,6 @@ blockquote {
   overflow: hidden;
   margin-top: 10px;
   margin-bottom: 20px; }
-  .img-step img {
-    max-width: 100%; }
 
 .admin-bar .theme-header,
 .admin-bar .theme-header.nav-open {
@@ -1436,6 +1430,60 @@ blockquote {
     padding: 10px;
     display: inline-block; }
 
+.wysija-input {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  height: 50px;
+  color: #bbb;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: rgba(153, 153, 153, 0.04);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-family: sans-serif;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  outline: none;
+  border-radius: 2px;
+  background-clip: padding-box;
+  padding: 10px; }
+  .wysija-input:hover, .wysija-input:focus {
+    background: #fff;
+    border: 1px solid #999; }
+  .wysija-input:focus {
+    color: #333; }
+
+.wysija-submit {
+  background: url(img/subscribe-btn.png) no-repeat left top;
+  background-size: 163px auto;
+  height: 85px;
+  width: 163px;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  box-shadow: none;
+  text-indent: -9999em; }
+  .wysija-submit:hover {
+    background-position: left bottom; }
+
+.wysija-paragraph {
+  padding: 0 15px; }
+  .wysija-paragraph .formError {
+    position: static !important; }
+    .wysija-paragraph .formError .formErrorContent {
+      width: 100% !important; }
+
+.widget_wysija_cont {
+  clear: both; }
+  .widget_wysija_cont .updated {
+    background-color: #F4E0BD;
+    border: 0;
+    font-size: 0.9rem;
+    padding: 15px; }
+
 .footer {
   text-align: center; }
   .footer .main-pillar {
@@ -1598,6 +1646,9 @@ body.single-recipe .images {
 .ct-recipe .recipe-meta-inline .block-head {
   display: table;
   width: 100%; }
+.ct-recipe .recipe-meta-inline h4, .ct-recipe .recipe-meta-inline .recipe-output {
+  display: table-cell;
+  vertical-align: bottom; }
 .ct-recipe .recipe-meta-inline ul {
   clear: both; }
   .ct-recipe .recipe-meta-inline ul li {

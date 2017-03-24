@@ -145,5 +145,15 @@ function loadArticle(pageNumber) {
 }
 </script>
 
+<script type="text/javascript" src="<?php echo plugins_url('wysija-newsletters/js/validate/languages/jquery.validationEngine-en.js?ver=2.7.8'); ?>"></script>
+<script type="text/javascript" src="<?php echo plugins_url('wysija-newsletters/js/validate/jquery.validationEngine.js?ver=2.7.8'); ?>"></script>
+<script type="text/javascript" src="<?php echo plugins_url('wysija-newsletters/js/front-subscribers.js?ver=2.7.8'); ?>"></script>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var wysijaAJAX = {"action":"wysija_ajax","controller":"subscribers","ajaxurl":"<?php echo admin_url('admin-ajax.php'); ?>","loadingTrans":"Loading..."};
+  /* ]]> */
+</script>
+<script type="text/javascript" src="<?php echo plugins_url('wysija-newsletters/js/front-subscribers.js?ver=2.7.8'); ?>"></script>
+
 </body>
 </html>

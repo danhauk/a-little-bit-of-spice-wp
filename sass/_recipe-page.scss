@@ -49,6 +49,11 @@ body.single-recipe {
 		width: 100%;
 	}
 
+	h4, .recipe-output {
+		display: table-cell;
+		vertical-align: bottom;
+	}
+
 	ul {
 		clear: both;
 
