@@ -11,7 +11,7 @@
 
 ?>
 
-<?php if ( is_search() ) { ?>
+<?php if ( is_search() || is_404() ) { ?>
 		</div> <!-- .search-page -->
 
 		<header class="header ctheader animate-transform no-scroll search">

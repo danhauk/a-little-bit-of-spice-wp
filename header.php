@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 
-<?php if ( is_search() ) { ?>
+<?php if ( is_search() || is_404() ) { ?>
 <div id="ct-container" class="container slide-animation">
 	<div class="search-page">
 
