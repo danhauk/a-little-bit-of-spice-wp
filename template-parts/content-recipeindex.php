@@ -94,6 +94,7 @@ foreach( $categories as $category ) {
 							'orderby' => 'date',
 							'order' => 'desc',
 							'posts_per_page' => 10,
+							'post_status' => 'publish'
 						);
 						$recipes = new WP_Query( $recipe_query_args );
 

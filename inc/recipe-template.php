@@ -12,6 +12,13 @@ function wpurp_custom_template_test( $content, $recipe )
 		<div class="recipe-meta-inline">
 			<div class="block-head">
 				<h4><span>Summary</span></h4>
+				<div class="recipe-output">
+					<?php
+					// --cherian: ratings code
+					if( function_exists('the_ratings') ) {
+						the_ratings( 'div', $recipe->ID() );
+					} ?>
+				</div>
 			</div>
 			<div class="ct-recipe-apps">
 				<a href="#">
