@@ -92,6 +92,7 @@ function a_little_bit_of_spice_setup() {
 	 * WP Ultimate Recipe custom template
 	 */
 	add_filter( 'wpurp_output_recipe', 'wpurp_custom_template_test', 10, 2 );
+	add_filter( 'the_ratings', 'a_little_bit_of_spice_ratings', 10, 3 );
 }
 endif;
 add_action( 'after_setup_theme', 'a_little_bit_of_spice_setup' );
@@ -252,3 +253,21 @@ function a_little_bit_of_spice_archive_title( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'a_little_bit_of_spice_archive_title' );
+
+/*
+ * Ratings
+ */
+ add_filter( 'wp_postratings_schema_itemtype', 'wp_postratings_schema_itemtype' );
+ function wp_postratings_schema_itemtype( $itemtype ) {
+     return 'itemscope itemtype="http://schema.org/Recipe"';
+ }
+
+ // --cherian
+ //remove wp version param from any enqueued scripts
+ function vc_remove_wp_ver_css_js( $src ) {
+     if ( strpos( $src, 'ver=' . get_bloginfo( 'version' ) ) )
+         $src = remove_query_arg( 'ver', $src );
+     return $src;
+ }
+ add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+ add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
