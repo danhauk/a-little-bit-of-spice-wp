@@ -271,3 +271,20 @@ add_filter( 'get_the_archive_title', 'a_little_bit_of_spice_archive_title' );
  }
  add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
  add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+
+function get_extra_recipe_meta(){
+        $post_meta .= '<meta itemprop="description" content="' . wp_kses( get_the_excerpt(), array() ) . '" />';
+        $post_meta .= '<meta itemprop="author" content="' . get_the_author() . '" />';
+        if( has_post_thumbnail() ) {
+            $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( null ) );
+            if( ! empty( $thumbnail ) ) {
+                $post_meta .= '<div style="display: none;" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">';
+                $post_meta .= '<meta itemprop="url" content="' . $thumbnail[0] . '" />';
+                $post_meta .= '<meta itemprop="width" content="' . $thumbnail[1] . '" />';
+                $post_meta .= '<meta itemprop="height" content="' . $thumbnail[2] . '" />';
+                $post_meta .= '</div>';
+            }
+    }
+    $post_meta .= '<meta itemprop="name" content="' . get_the_title() . '" />';
+    return $post_meta;
+}

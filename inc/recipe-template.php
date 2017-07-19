@@ -9,6 +9,7 @@ function wpurp_custom_template_test( $content, $recipe )
 	ob_start();
 	?>
 	<div itemscope itemtype="http://schema.org/Recipe" class="ct-recipe">
+		<?php echo get_extra_recipe_meta(); ?>
 		<div class="recipe-meta-inline">
 			<div class="block-head">
 				<h4><span>Summary</span></h4>
