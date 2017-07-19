@@ -259,7 +259,7 @@ add_filter( 'get_the_archive_title', 'a_little_bit_of_spice_archive_title' );
  */
  add_filter( 'wp_postratings_schema_itemtype', 'wp_postratings_schema_itemtype' );
  function wp_postratings_schema_itemtype( $itemtype ) {
-     return 'itemscope itemtype="http://schema.org/Recipe"';
+     return '';
  }
 
  // --cherian
