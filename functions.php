@@ -16,6 +16,11 @@ if ( ! function_exists( 'a_little_bit_of_spice_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function a_little_bit_of_spice_setup() {
+	
+	add_filter('wpurp_query_posts', 'mailpoet_subscription', 10, 2);
+		function mailpoet_subscription($post_type, $query) {
+		return ($query->get('name') === 'subscriptions') ? array('mailpoet_page') : $post_type;
+	}
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
